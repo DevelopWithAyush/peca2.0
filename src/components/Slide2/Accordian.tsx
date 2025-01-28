@@ -1,21 +1,46 @@
 import { cn } from "@/lib/utility";
 import { DownArrow } from "@/VectorImages/Image";
 import { motion, AnimatePresence } from "framer-motion"; // For advanced animations
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Accordian = ({ title, desc }: { title: string; desc: string }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const boxRef = useRef<HTMLDivElement>(null); // Explicitly type the ref
+
+  const handleClickOutside = (event: MouseEvent) => {
+    // Check if the click happened outside the boxRef
+    if (boxRef.current && !boxRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener when the component mounts
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div
+      ref={boxRef}
       className={cn(
         "pb-0 w-[392.5px] flex flex-col items-center justify-between bg-border rounded-[24px] cursor-pointer border-[4px] border-solid overflow-hidden  ",
-          title === "Get Wallet" && "bg-border border-secondary",
+        title === "Get Wallet" && "bg-border border-secondary",
         title === "Fund Wallet" && "bg-green border-text ",
         title === "Buy & Stake" && "bg-secondary border-primary "
       )}
       style={{
-          boxShadow: `4px 4px 0px 0px ${title === "Get Wallet" ? "#705CFE" : (title === "Fund Wallet" ? "#F5F5F5" :"#FFD700" )}`,
+        boxShadow: `4px 4px 0px 0px ${
+          title === "Get Wallet"
+            ? "#705CFE"
+            : title === "Fund Wallet"
+            ? "#F5F5F5"
+            : "#FFD700"
+        }`,
       }}
       // Click anywhere to toggle
     >
@@ -40,7 +65,10 @@ const Accordian = ({ title, desc }: { title: string; desc: string }) => {
           }}
           className="p-[8px] rounded-full border-background border-solid bg-text aspect-square"
           whileHover={{ scale: 1.1 }} // Hover effect
-          whileTap={{ scale: 0.9 }} // Tap effect
+                  whileTap={{ scale: 0.9 }}
+                  style={{
+                      boxShadow:"0px 4px 10px 0px rgba(188, 149, 228, 0.50)"
+          }}        // Tap effect
         >
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }} // Rotate the arrow
@@ -64,7 +92,7 @@ const Accordian = ({ title, desc }: { title: string; desc: string }) => {
               className={cn(
                 "text-[16px] font-grandstander-medium_500 text-text leading-[110%] rounded-t-[24px] p-6 ",
 
-                  title === "Get Wallet" && "text-text bg-secondary",
+                title === "Get Wallet" && "text-text bg-secondary",
                 title === "Fund Wallet" && "text-background bg-text ",
                 title === "Buy & Stake" && "text-background bg-primary"
               )}
