@@ -2,20 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: black;
+  background: #4b0082;
   font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 0.2rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(46, 46, 46);
+  border-radius: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #1d1d1d;
+  border-radius: 1rem;
+}
+
+@font-face {
+  font-family: Grandstander-Thin;
+  src: local("Grandstander-Thin"),
+    url("/fonts/Grandstander/Grandstander-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-ThinItalic;
+  src: local("Grandstander-ThinItalic"),
+    url("/fonts/Grandstander/Grandstander-ThinItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-ExtraLight;
+  src: local("Grandstander-ExtraLight"),
+    url("/fonts/Grandstander/Grandstander-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-ExtraLightItalic;
+  src: local("Grandstander-ExtraLightItalic"),
+    url("/fonts/Grandstander/Grandstander-ExtraLightItalic.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-Light;
+  src: local("Grandstander-Light"),
+    url("/fonts/Grandstander/Grandstander-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-LightItalic;
+  src: local("Grandstander-LightItalic"),
+    url("/fonts/Grandstander/Grandstander-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-Regular;
+  src: local("Grandstander-Regular"),
+    url("/fonts/Grandstander/Grandstander-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-RegularItalic;
+  src: local("Grandstander-RegularItalic"),
+    url("/fonts/Grandstander/Grandstander-RegularItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-Medium;
+  src: local("Grandstander-Medium"),
+    url("/fonts/Grandstander/Grandstander-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-MediumItalic;
+  src: local("Grandstander-MediumItalic"),
+    url("/fonts/Grandstander/Grandstander-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-SemiBold;
+  src: local("Grandstander-SemiBold"),
+    url("/fonts/Grandstander/Grandstander-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-SemiBoldItalic;
+  src: local("Grandstander-SemiBoldItalic"),
+    url("/fonts/Grandstander/Grandstander-SemiBoldItalic.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-Bold;
+  src: local("Grandstander-Bold"),
+    url("/fonts/Grandstander/Grandstander-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-BoldItalic;
+  src: local("Grandstander-BoldItalic"),
+    url("/fonts/Grandstander/Grandstander-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-ExtraBold;
+  src: local("Grandstander-ExtraBold"),
+    url("/fonts/Grandstander/Grandstander-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-ExtraBoldItalic;
+  src: local("Grandstander-ExtraBoldItalic"),
+    url("/fonts/Grandstander/Grandstander-ExtraBoldItalic.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-Black;
+  src: local("Grandstander-Black"),
+    url("/fonts/Grandstander/Grandstander-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Grandstander-BlackItalic;
+  src: local("Grandstander-BlackItalic"),
+    url("/fonts/Grandstander/Grandstander-BlackItalic.ttf") format("truetype");
 }

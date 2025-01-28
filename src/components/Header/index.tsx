@@ -1,0 +1,116 @@
+import Image from "next/image";
+import Link from "next/link";
+import NavLink from "./NavLink";
+import TelegramIcon from "./TelegramIcon";
+import XIcon from "./XIcon";
+
+const Header = () => {
+  return (
+    <header className="   z-10 flex flex-row justify-between items-center   m-8 rounded-[56px] border-[4px] border-solid border-border bg-text  px-8 py-3 ">
+      <div className="flex flex-row items-center justify-start  gap-0">
+        <img
+          src={"/images/logo.png"}
+          alt="logo"
+          className="w-[51px] h-[51px]"
+        />
+        <div className=" flex flex-col items-start justify-center pt-1 gap-0 ">
+          <span
+            className="text-[#FFF] uppercase text-[24px] font-grandstander-black_900 leading-[82%] "
+            style={{
+              WebkitTextStrokeWidth: "5px",
+              WebkitTextStrokeColor: "#4B0082",
+              paintOrder: "stroke fill",
+            }}
+          >
+            PEPIUS
+          </span>
+          <span
+            className="text-[#FFD700] text-[24px] font-grandstander-black_900 leading-[82%]   "
+            style={{
+              WebkitTextStrokeWidth: "5px",
+              WebkitTextStrokeColor: "#4B0082",
+              paintOrder: "stroke fill",
+            }}
+          >
+            CAESAR
+          </span>{" "}
+        </div>
+      </div>
+      <nav className="flex flex-row items-end  justify-start gap-2 w-auto">
+        <Link href={"/"} className="flex flex-row items-end justify-center  ">
+          <div className="w-[24px] h-[24px] relative">
+            <Image
+              src="/images/Gifs/fire.png"
+              alt="fire"
+              width={24}
+              height={24}
+              className="w-[24px] h-[24px]"
+            />
+          </div>
+          <div className="flex flex-col items-end">
+            <p className="px-[5px]  text-green text-[9px] font-grandstander-medium_500 whitespace-nowrap leading-[110%] ">
+              Coming Soon
+            </p>
+            <p className="px-1  text-[16px] font-grandstander-medium_500 text-background leading-[140%] hover:text-secondary duration-300 ease-in-out  ">
+              SupaDapp
+            </p>
+          </div>
+        </Link>
+
+        <NavLink title="how to buy" link={"/how-to-buy"} />
+        <NavLink title="Tokenomics" link={"/tokenomics"} />
+        <NavLink title="FAQs" link={"/faqs"} />
+        <Link href={"/"} className="flex flex-row items-end justify-center  ">
+          <div className="flex flex-col items-end">
+            <p className="px-[5px]  text-green text-[9px] font-grandstander-medium_500 whitespace-nowrap leading-[110%] ">
+              Coming Soon
+            </p>
+            <p className="px-1  text-[16px] font-grandstander-medium_500 text-background  leading-[140%] hover:text-secondary duration-300 ease-in-out  ">
+              Staking
+            </p>
+          </div>
+        </Link>
+
+        <NavLink title="Roadmap" link={"/roadmap"} />
+        <NavLink title="Whitepaper" link={"/whitepaper"} />
+      </nav>
+      <div className=" flex flex-row items-center justify-start gap-4 ">
+        <XIcon />
+        <TelegramIcon />
+        <button className="text-[18px] leading-[160%] text-background font-grandstander-medium_500 px-8 py-2 bg-primary rounded-[8px] flex flex-col items-center justify-center">
+          Audit
+        </button>
+        <button
+          className="text-[22px] leading-[160%] text-text font-grandstander-medium_500 px-8 py-[5px] bg-green rounded-[8px] flex flex-col items-center justify-center "
+          style={{
+            WebkitTextStrokeWidth: "5px",
+            WebkitTextStrokeColor: "#4B0082",
+            paintOrder: "stroke fill",
+          }}
+        >
+          Connect
+        </button>
+        <button className="flex flex-row items-center justify-between w-[79px]">
+          <div className="text-[16px] py-[7px] px-[16px] border-[2px] border-solid border-background text-background font-grandstander-medium_500 rounded-[8px] ">
+            En
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M12.0002 16.4771L18.0102 10.4671L16.5972 9.05212L12.0002 13.6521L7.40423 9.05212L5.99023 10.4661L12.0002 16.4771Z"
+              fill="#4B0082"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
