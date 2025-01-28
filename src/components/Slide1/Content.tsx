@@ -1,16 +1,17 @@
-import React from "react";
 
 const Content = () => {
   return (
     <div className="flex flex-col items-start justify-start gap-y-5">
       <button
-        className="flex items-center justify-start gap-4 pr-8 py-[6px] pl-[6px] rounded-[40px] "
+        className="flex items-center justify-start gap-4 pr-8 py-[6px] pl-[6px] rounded-[40px] overflow-hidden "
         style={{
           background: "rgba(255, 255, 255, 0.50)",
           backdropFilter: "blur(25px)",
         }}
       >
-        <div className="w-[50px] h-[50px] rounded-full bg-white"></div>
+              <div className="w-[50px] h-[50px] rounded-full  relative bg-white ">
+                  {/* <Image src={"/images/Gifs/gola.gif"} alt="gola" fill className="mix-blend-color-burn object-fill "/> */}
+        </div>
         <p
           className="text-background text-center font-grandstander-bold_700 leading-normal"
           style={{

@@ -2,13 +2,13 @@
 import React from "react";
 import Header from "../Header";
 import Breaking from "../Breaking";
-import TokenBox from "./TokenBox";
+import TokenBox from "../common/TokenBox";
 import Content from "./Content";
 import Image from "next/image";
 
 const Slide1 = () => {
   return (
-    <div className="bg-[url('/images/Background1.png')] bg-no-repeat bg-contain bg-bottom  relative w-[100vw] overflow-hidden  ">
+    <div className="bg-[url('/images/Background1.png')]   bg-no-repeat bg-contain bg-bottom  relative w-[100vw] overflow-hidden   ">
       <div className=" w-full bg-background z-[10] ">
         <Header />
         <Breaking />
@@ -19,7 +19,7 @@ const Slide1 = () => {
           <TokenBox />
           <div className="w-full pt-[17px] flex flex-col items-start justify-start gap-5">
             <Content />
-         
+
           </div>
         </div>
       </div>

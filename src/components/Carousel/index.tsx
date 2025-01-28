@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import Slide2 from "../Slides/Slide2";
-import Slide3 from "../Slides/Slide3";
-import Slide4 from "../Slides/Slide4";
 import Slide5 from "../Slides/Slide5";
 import Slide6 from "../Slides/Slide6";
 import Slide1 from "../Slide1";
+import Slide2 from "../Slide2";
+import Slide3 from "../Slide3";
+import Slide4 from "../Slide4";
 
 const Carousel: React.FC = () => {
   const slides = [
