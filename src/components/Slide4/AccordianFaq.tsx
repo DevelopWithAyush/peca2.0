@@ -34,7 +34,7 @@ const AccordianFaq = ({
     <div
       ref={boxRef}
       className={cn(
-        "pb-0 w-full max-w-[820px] flex flex-col items-center justify-between rounded-[24px] cursor-pointer border-[4px] border-solid overflow-hidden",
+        "pb-0 w-full relative z-20   max-w-[820px] flex flex-col items-center justify-between rounded-[24px] cursor-pointer border-[4px] border-solid overflow-hidden",
         index % 3 === 0 && "bg-border border-secondary", // Every 3rd item starting from 0
         index % 3 === 1 && "bg-background border-text", // Every 3rd item starting from 1
         index % 3 === 2 && "bg-secondary border-primary" // Every 3rd item starting from 2

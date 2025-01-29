@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AccordianFaq from "./AccordianFaq";
 
 const Content = () => {
@@ -15,6 +16,7 @@ const Content = () => {
       </p>
 
       <div className="flex flex-col items-start justify-start gap-8 w-full ">
+        <Image src={"/images/Images/Slide4Image1.png"} width={231} height={199} alt="Slide4Image1" className="absolute top-0 right-[39px] -translate-y-[25%] z-0"/>
         {Array.from({ length: 5 }).map((_, index) => {
           return (
             <AccordianFaq

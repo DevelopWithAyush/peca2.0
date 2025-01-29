@@ -1,13 +1,12 @@
 "use client";
+import { DownArrow } from "@/VectorImages/Image";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Slide1 from "../Slide1";
 import Slide2 from "../Slide2";
 import Slide3 from "../Slide3";
 import Slide4 from "../Slide4";
-import Slide5 from "../Slide5";
 import Slide6 from "../Slide6";
-import { DownArrow } from "@/VectorImages/Image";
 
 const Carousel: React.FC = () => {
   const slides = [
@@ -15,7 +14,7 @@ const Carousel: React.FC = () => {
     <Slide2 key={2} />,
     <Slide3 key={3} />,
     <Slide4 key={4} />,
-    <Slide5 key={5} />,
+    // <Slide5 key={5} />,
     <Slide6 key={6} />,
     // <Slide7 key={6} />,
   ];

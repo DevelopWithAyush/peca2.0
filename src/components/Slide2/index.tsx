@@ -6,10 +6,8 @@ import TokenBox from "../common/TokenBox";
 import Content from "./Content";
 
 const Slide2 = () => {
-
-
   return (
-    <div className="bg-[url('/images/Background1.png')]   bg-no-repeat bg-contain bg-bottom  relative w-[100vw] overflow-hidden   ">
+    <div className="bg-[url('/images/Background1.png')]   bg-no-repeat bg-contain bg-bottom  relative w-[100vw]    ">
       <div className=" w-full bg-background z-[10] ">
         <Header />
         <Breaking />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import RoadMapCard from "./RoadMapCard";
 
 const phases = [
@@ -55,7 +56,10 @@ const Content = () => {
         PEPIUS CAESAR’S ROADMAP
       </p>
 
-          <div className="grid grid-cols-2 items-start justify-start gap-x-8 gap-y-9 w-full">
+          <div className="grid grid-cols-2 items-start justify-start gap-x-8 gap-y-9 relative w-full">
+              <Image src={"/images/Images/Slide6Image1.png"} width={233} height={186} alt="Slide6Image1" className="absolute top-0 right-0 -translate-y-[87%] z-0"/>
+              {/* <Image src={"/images/Images/Slide6Image2.png"} width={233} height={186} alt="Slide6Image1" className="absolute bottom-0 right-0 z-20 -translate-x-[100%]"/> */}
+              <Image src={"/images/Images/Slide6Image3.png"} width={233} height={186} alt="Slide6Image1" className="absolute bottom-0 left-0  z-30 -translate-x-[55%] translate-y-[30%]"/>
               {phases.map((phase) => {
                   return <RoadMapCard key={phase.phase} phase={phase.phase} title ={phase.title} details={phase.details} />
               })}

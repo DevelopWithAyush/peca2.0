@@ -13,7 +13,7 @@ const Slide3 = () => {
                 <Breaking />
             </div>
 
-            <div className=" w-full max-w-[88rem] mx-auto  px-8 py-[32px] ">
+            <div className=" w-full max-w-[90rem] mx-auto  px-8 py-[32px] ">
                 <div className=" flex flex-row items-start justify-start gap-12">
                     <TokenBox />
                     <Content />

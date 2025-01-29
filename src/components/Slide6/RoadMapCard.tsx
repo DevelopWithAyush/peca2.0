@@ -11,7 +11,7 @@ const RoadMapCard = ({
 }) => {
   return (
     <div
-      className="col-span-1 px-6 py-8 flex flex-col items-start justify-start gap-5 border-[4px] border-solid border-primary bg-background rounded-[24px]"
+      className="col-span-1 px-6 relative z-10 py-6 flex flex-col items-start justify-start gap-2 border-[4px] border-solid border-primary bg-background rounded-[24px]"
       style={{
         boxShadow: "4px 4px 0px 0px #FFD700",
       }}

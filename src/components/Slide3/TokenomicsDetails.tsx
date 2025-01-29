@@ -15,7 +15,7 @@ const TokenomicsDetails = ({
   return (
     <div
       className={cn(
-        "col-span-1 flex flex-col items-start justify-start gap-5",
+        "col-span-1 flex flex-col items-start justify-start gap-2",
         colSpan && "col-span-2",
         "p-4 bg-primary rounded-[16px]"
       )}
