@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import Slide5 from "../Slides/Slide5";
-import Slide6 from "../Slides/Slide6";
 import Slide1 from "../Slide1";
 import Slide2 from "../Slide2";
 import Slide3 from "../Slide3";
 import Slide4 from "../Slide4";
+import Slide5 from "../Slide5";
+import Slide6 from "../Slide6";
+import { DownArrow } from "@/VectorImages/Image";
 
 const Carousel: React.FC = () => {
   const slides = [
@@ -16,6 +17,7 @@ const Carousel: React.FC = () => {
     <Slide4 key={4} />,
     <Slide5 key={5} />,
     <Slide6 key={6} />,
+    // <Slide7 key={6} />,
   ];
 
   const playSound = () => {
@@ -47,12 +49,22 @@ const Carousel: React.FC = () => {
     <>
       <div className="flex flex-col items-start justify-start ">
         <button
-          className={`fixed z-[999]  top-1/2 left-[5%] text-text transform -translate-y-1/2 ${
-            currentIndex === 0 ? "hidden" : "block"
-          }`}
+          className={`fixed z-[999]  top-1/2 left-[5%] 
+            text-text 
+            bg-text 
+            p-4 aspect-square 
+            rotate-90 
+            rounded-full 
+            border-[2px] 
+            border-solid border-background transform -translate-y-1/2 ${
+              currentIndex === 0 ? "hidden" : "block"
+            }`}
           onClick={prevSlide}
+          style={{
+            boxShadow: "0px 2px 10px 0px rgba(253, 253, 253, 0.52)",
+          }}
         >
-          Previous
+          <DownArrow />
         </button>
 
         {slides.map((slide, index) => (
@@ -75,12 +87,24 @@ const Carousel: React.FC = () => {
         ))}
 
         <button
-          className={`fixed z-[999] top-1/2 right-[5%] transform -translate-y-1/2 text-text ${
-            currentIndex === slides.length - 1 ? "hidden" : "block"
-          }`}
+          className={`fixed z-[999] top-1/2 right-[5%]
+            
+             bg-text 
+            p-4 aspect-square 
+            rounded-full 
+            border-[2px] 
+            border-solid
+            -rotate-90
+            border-background 
+            transform -translate-y-1/2 text-text ${
+              currentIndex === slides.length - 1 ? "hidden" : "block"
+            }`}
           onClick={nextSlide}
+          style={{
+            boxShadow: "0px 2px 10px 0px rgba(253, 253, 253, 0.52)",
+          }}
         >
-          Next
+          <DownArrow />
         </button>
       </div>
     </>

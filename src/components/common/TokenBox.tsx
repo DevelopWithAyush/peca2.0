@@ -3,7 +3,7 @@ import React from "react";
 // 定义一个名为TokenBox的函数组件
 const TokenBox = () => {
   return (
-    <div className="w-auto h-auto bg-primary p-6 border-[8px] border-solid border-border rounded-[44px] flex flex-col items-center justify-start gap-4  ">
+    <div className="w-auto h-auto   bg-primary p-6 border-[8px] border-solid border-border rounded-[44px] flex flex-col items-center justify-start gap-4  ">
       <div className="bg-background p-[9px] flex flex-row items-center rounded-[32px] justify-start gap-2 relative">
         <div className="w-[81px] bg-border rounded-[32px] h-[19px]"></div>
         <div className="w-[19px] bg-white  rounded-[32px] h-[19px]"></div>

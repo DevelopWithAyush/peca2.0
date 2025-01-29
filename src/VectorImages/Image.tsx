@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utility";
+
 export const DownArrow = () => {
   return (
     <svg
@@ -82,6 +84,70 @@ export const MinusIcon = () => {
         stroke="#4B0082"
         stroke-width="1.5"
       />
+    </svg>
+  );
+};
+
+export const VectorButton = ({ width }: { width: string }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height="100%"
+      viewBox="0 0 248 75"
+      fill="none"
+      className={cn("  ")}
+      style={{
+        filter: "drop-shadow(-2px 8px 0px #A26CD9)",
+      }}
+    >
+      <g filter="url(#filter0_d_459_11920)">
+        <path
+          d="M4.36822 64.0272C4.36822 64.0272 3.53972 38.7085 4.36822 26.8429C5.19673 14.9774 13.0215 9.50423 23.7863 8.45973C34.5511 7.41522 248 3.02832 248 3.02832C248 3.02832 241.268 35.2825 235.055 48.1508C228.841 61.019 214.515 64.0968 208.128 64.0272C201.742 63.9575 4.36822 64.0272 4.36822 64.0272Z"
+          fill="#FFD700"
+        />
+        <path
+          d="M4.36822 64.0272C4.36822 64.0272 3.53972 38.7085 4.36822 26.8429C5.19673 14.9774 13.0215 9.50423 23.7863 8.45973C34.5511 7.41522 248 3.02832 248 3.02832C248 3.02832 241.268 35.2825 235.055 48.1508C228.841 61.019 214.515 64.0968 208.128 64.0272C201.742 63.9575 4.36822 64.0272 4.36822 64.0272Z"
+          stroke="#9966CC"
+          stroke-width="4"
+        />
+      </g>
+      <defs>
+        {/* <filter
+          id="filter0_d_459_11920"
+          x="0"
+          y="0.977051"
+          width="250.472"
+          height="73.0513"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dx="-2" dy="8" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.63567 0 0 0 0 0.424748 0 0 0 0 0.849137 0 0 0 1 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_459_11920"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_459_11920"
+            result="shape"
+          />
+        </filter> */}
+      </defs>
     </svg>
   );
 };

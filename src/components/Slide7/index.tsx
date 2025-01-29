@@ -2,12 +2,7 @@
 import Breaking from "../Breaking";
 import Header from "../Header";
 
-import TokenBox from "../common/TokenBox";
-import Content from "./Content";
-
-const Slide2 = () => {
-
-
+const Slide7 = () => {
   return (
     <div className="bg-[url('/images/Background1.png')]   bg-no-repeat bg-contain bg-bottom  relative w-[100vw] overflow-hidden   ">
       <div className=" w-full bg-background z-[10] ">
@@ -16,13 +11,19 @@ const Slide2 = () => {
       </div>
 
       <div className=" w-full max-w-[88rem] mx-auto  px-8 py-[32px] ">
-        <div className=" flex flex-row items-start justify-start gap-12">
-          <TokenBox />
-          <Content />
-        </div>
+        <p
+          className="text-secondary text-[48px] font-grandstander-black_900 leading-normal  "
+          style={{
+            WebkitTextStrokeColor: "#FFD700",
+            WebkitTextStrokeWidth: "4px",
+            paintOrder: "stroke fill",
+          }}
+        >
+          $PECA SUPADAPP
+        </p>
       </div>
     </div>
   );
 };
 
-export default Slide2;
+export default Slide7;

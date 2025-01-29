@@ -15,7 +15,7 @@ const Content = () => {
             </p>
 
             <div
-                className="flex flex-col p-6 border border-solid border-primary rounded-[24px]  items-start justify-start gap-12 bg-green "
+                className="flex flex-col p-6 border border-solid border-primary rounded-[24px]  items-start justify-start gap-12 bg-green max-w-[844px] "
                 style={{
                     boxShadow: "4px 4px 0px 0px #FFD700",
                 }}
@@ -23,7 +23,7 @@ const Content = () => {
                 <p className="text-text font-grandstander-bold_700 leading-[110%] ">
                     The engine that makes the $PECA machine run.
                 </p>
-                <div className="grid grid-cols-2 gap-x-5 gap-y-5">
+                <div className="grid grid-cols-2 gap-x-5 gap-y-5 ">
                     <TokenomicsDetails percentage="35%" title="Project Development " desc="Dedicated to the development and continuous enhancement of SupaDapp" />
                     <TokenomicsDetails percentage="10%" title="Presale " desc="Allocated for early soldiers to join Pepius’s venture at the best entry price." />
                     <TokenomicsDetails percentage="10%" title="Staking & Rewards " desc="Programmed to incentivise committed holders for project’s long term stability." />

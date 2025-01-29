@@ -65,10 +65,10 @@ const Accordian = ({ title, desc }: { title: string; desc: string }) => {
           }}
           className="p-[8px] rounded-full border-background border-solid bg-text aspect-square"
           whileHover={{ scale: 1.1 }} // Hover effect
-                  whileTap={{ scale: 0.9 }}
-                  style={{
-                      boxShadow:"0px 4px 10px 0px rgba(188, 149, 228, 0.50)"
-          }}        // Tap effect
+          whileTap={{ scale: 0.9 }}
+          style={{
+            boxShadow: "0px 4px 10px 0px rgba(188, 149, 228, 0.50)",
+          }} // Tap effect
         >
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }} // Rotate the arrow
@@ -90,7 +90,7 @@ const Accordian = ({ title, desc }: { title: string; desc: string }) => {
           >
             <motion.p
               className={cn(
-                "text-[16px] font-grandstander-medium_500 text-text leading-[110%] rounded-t-[24px] p-6 ",
+                "text-[16px] font-grandstander-medium_500 text-text leading-[160%] rounded-t-[24px] p-6 ",
 
                 title === "Get Wallet" && "text-text bg-secondary",
                 title === "Fund Wallet" && "text-background bg-text ",

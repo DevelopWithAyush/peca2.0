@@ -23,16 +23,12 @@ const AccordianFaq = ({
   };
 
   useEffect(() => {
-    // Add event listener when the component mounts
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Cleanup the event listener when the component unmounts
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  console.log(index % 3);
 
   return (
     <div
@@ -93,7 +89,7 @@ const AccordianFaq = ({
           >
             <motion.p
               className={cn(
-                "text-[16px] font-grandstander-medium_500 text-text leading-[110%] rounded-t-[24px] p-6",
+                "text-[16px] font-grandstander-medium_500 text-text leading-[160%] rounded-t-[24px] p-6",
                 index % 3 === 0 && "bg-secondary ",
                 index % 3 === 1 && "bg-text text-background",
                 index % 3 === 2 && "bg-primary text-background"

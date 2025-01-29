@@ -5,7 +5,7 @@ import Header from "../Header";
 import TokenBox from "../common/TokenBox";
 import Content from "./Content";
 
-const Slide3 = () => {
+const Slide6 = () => {
     return (
         <div className="bg-[url('/images/Background1.png')]   bg-no-repeat bg-contain bg-bottom  relative w-[100vw] overflow-hidden   ">
             <div className=" w-full bg-background z-[10] ">
@@ -23,4 +23,4 @@ const Slide3 = () => {
     );
 };
 
-export default Slide3;
+export default Slide6;
