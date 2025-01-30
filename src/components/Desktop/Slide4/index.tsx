@@ -1,8 +1,8 @@
 "use client";
-import Breaking from "../Breaking";
-import Header from "../Header";
+import Breaking from "../../Breaking";
+import Header from "../../Header";
 
-import TokenBox from "../common/TokenBox";
+import TokenBox from "../../common/TokenBox";
 import Content from "./Content";
 
 const Slide4 = () => {

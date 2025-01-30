@@ -1,7 +1,7 @@
 "use client";
 import { VectorButton } from "@/VectorImages/Image";
-import Breaking from "../Breaking";
-import Header from "../Header";
+import Breaking from "../../Breaking";
+import Header from "../../Header";
 import TokenStakingCard from "./TokenStakingCard";
 import Image from "next/image";
 

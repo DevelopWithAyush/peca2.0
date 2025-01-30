@@ -6,12 +6,13 @@ import XIcon from "./XIcon";
 
 const Header = () => {
   return (
-    <header className="   z-10 flex flex-row justify-between items-center   m-8 rounded-[56px] border-[4px] border-solid border-border bg-text  px-8 py-3 ">
+    <div className="xl:p-8 px-5 py-4 w-full">
+    <header className="   z-10 flex flex-row justify-between items-center  w-full rounded-[56px] border-[4px] border-solid border-border bg-text px-5 py-3  xl:px-8 xl:py-3 ">
       <div className="flex flex-row items-center justify-start  gap-0">
         <img
           src={"/images/logo.png"}
           alt="logo"
-          className="w-[51px] h-[51px]"
+          className="w-[51px] h-[51px]  "
         />
         <div className=" flex flex-col items-start justify-center pt-1 gap-0 ">
           <span
@@ -22,7 +23,7 @@ const Header = () => {
               paintOrder: "stroke fill",
             }}
           >
-            PEPIUS
+            $PEPIUS
           </span>
           <span
             className="text-[#FFD700] text-[24px] font-grandstander-black_900 leading-[82%]   "
@@ -36,7 +37,7 @@ const Header = () => {
           </span>{" "}
         </div>
       </div>
-      <nav className="flex flex-row items-end  justify-start gap-2 w-auto">
+      <nav className="hidden flex-row items-end  justify-start gap-2 w-auto xl:flex">
         <Link href={"/"} className="flex flex-row items-end justify-center  ">
           <div className="w-[24px] h-[24px] relative">
             <Image
@@ -74,7 +75,7 @@ const Header = () => {
         <NavLink title="Roadmap" link={"/roadmap"} />
         <NavLink title="Whitepaper" link={"/whitepaper"} />
       </nav>
-      <div className=" flex flex-row items-center justify-start gap-4 ">
+      <div className=" hidden flex-row items-center justify-start gap-4 xl:flex">
         <XIcon />
         <TelegramIcon />
         <button className="text-[18px] leading-[160%] text-background font-grandstander-medium_500 px-8 py-2 bg-primary rounded-[8px] flex flex-col items-center justify-center">
@@ -110,6 +111,7 @@ const Header = () => {
         </button>
       </div>
     </header>
+    </div>
   );
 };
 

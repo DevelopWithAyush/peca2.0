@@ -2,11 +2,11 @@
 import { DownArrow } from "@/VectorImages/Image";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import Slide1 from "../Slide1";
-import Slide2 from "../Slide2";
-import Slide3 from "../Slide3";
-import Slide4 from "../Slide4";
-import Slide6 from "../Slide6";
+import Slide1 from "../Desktop/Slide1";
+import Slide2 from "../Desktop/Slide2";
+import Slide3 from "../Desktop/Slide3";
+import Slide4 from "../Desktop/Slide4";
+import Slide6 from "../Desktop/Slide6";
 
 const Carousel: React.FC = () => {
   const slides = [
@@ -46,7 +46,7 @@ const Carousel: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col items-start justify-start ">
+      <div className="hidden xl:flex flex-col items-start justify-start ">
         <button
           className={`fixed z-[999]  top-1/2 left-[5%] 
             text-text 
@@ -55,8 +55,7 @@ const Carousel: React.FC = () => {
             rotate-90 
             rounded-full 
             border-[2px] 
-            border-solid border-background transform -translate-y-1/2 ${
-              currentIndex === 0 ? "hidden" : "block"
+            border-solid border-background transform -translate-y-1/2 ${currentIndex === 0 ? "hidden" : "block"
             }`}
           onClick={prevSlide}
           style={{
@@ -69,9 +68,8 @@ const Carousel: React.FC = () => {
         {slides.map((slide, index) => (
           <motion.div
             key={index}
-            className={`absolute w-full ${
-              index === currentIndex ? "block" : "hidden"
-            }`}
+            className={`absolute w-full ${index === currentIndex ? "block" : "hidden"
+              }`}
             initial="initial"
             whileInView="animate"
             exit="exit"
@@ -95,8 +93,7 @@ const Carousel: React.FC = () => {
             border-solid
             -rotate-90
             border-background 
-            transform -translate-y-1/2 text-text ${
-              currentIndex === slides.length - 1 ? "hidden" : "block"
+            transform -translate-y-1/2 text-text ${currentIndex === slides.length - 1 ? "hidden" : "block"
             }`}
           onClick={nextSlide}
           style={{

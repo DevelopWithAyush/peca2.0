@@ -28,7 +28,7 @@ const Accordian = ({ title, desc }: { title: string; desc: string }) => {
     <div
       ref={boxRef}
       className={cn(
-        "pb-0 w-[392.5px] flex flex-col items-center justify-between bg-border rounded-[24px] cursor-pointer border-[4px] border-solid overflow-hidden  ",
+        "pb-0 w-full xl:w-[392.5px] flex flex-col items-center justify-between bg-border rounded-[24px] cursor-pointer border-[4px] border-solid overflow-hidden  ",
         title === "Get Wallet" && "bg-border border-secondary",
         title === "Fund Wallet" && "bg-green border-text ",
         title === "Buy & Stake" && "bg-secondary border-primary "

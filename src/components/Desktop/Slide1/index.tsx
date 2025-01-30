@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
-import Header from "../Header";
-import Breaking from "../Breaking";
-import TokenBox from "../common/TokenBox";
+import Header from "../../Header";
+import Breaking from "../../Breaking";
+import TokenBox from "../../common/TokenBox";
 import Content from "./Content";
 import Image from "next/image";
 

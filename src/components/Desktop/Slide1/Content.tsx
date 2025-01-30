@@ -1,7 +1,6 @@
-
 const Content = () => {
   return (
-    <div className="flex flex-col items-start justify-start gap-y-5">
+    <div className="flex flex-col w-full xl:w-auto items-start justify-start gap-y-5 ">
       <button
         className="flex items-center justify-start gap-4 pr-8 py-[6px] pl-[6px] rounded-[40px] overflow-hidden "
         style={{
@@ -9,11 +8,11 @@ const Content = () => {
           backdropFilter: "blur(25px)",
         }}
       >
-              <div className="w-[50px] h-[50px] rounded-full  relative bg-white ">
-                  {/* <Image src={"/images/Gifs/gola.gif"} alt="gola" fill className="mix-blend-color-burn object-fill "/> */}
+        <div className="w-[50px] h-[50px] rounded-full  relative bg-white ">
+          {/* <Image src={"/images/Gifs/gola.gif"} alt="gola" fill className="mix-blend-color-burn object-fill "/> */}
         </div>
         <p
-          className="text-background text-center font-grandstander-bold_700 leading-normal"
+          className="text-background text-center font-grandstander-bold_700 text-[24px] leading-normal"
           style={{
             WebkitTextStrokeWidth: "2px",
             WebkitTextStrokeColor: "#FFF",
@@ -23,13 +22,13 @@ const Content = () => {
           AI-Powered DApp
         </p>
       </button>
-      <div className="flex flex-col items-start justify-start gap-y-8 max-w-[38vw] ">
+      <div className="flex flex-col items-start justify-start  gap-y-8 xl:max-w-[38vw] w-full  ">
         <p className="text-[18px] font-grandstander-medium_500 text-text leading-[160%] ">
           Frustrated with juggling multiple dApps to perform even basic
           operations in web3, Pepius is set to launch
         </p>
         <p
-          className="text-[40px] font-grandstander-black_900  text-secondary  leading-[125%]"
+          className="text-[32px] xl:text-[40px] font-grandstander-black_900  text-secondary  leading-[125%]"
           style={{
             WebkitTextStrokeWidth: "4px",
             WebkitTextStrokeColor: "#FFD700",

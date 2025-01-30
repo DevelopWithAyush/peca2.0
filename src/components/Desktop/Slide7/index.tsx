@@ -1,6 +1,6 @@
 "use client";
-import Breaking from "../Breaking";
-import Header from "../Header";
+import Breaking from "../../Breaking";
+import Header from "../../Header";
 
 const Slide7 = () => {
   return (

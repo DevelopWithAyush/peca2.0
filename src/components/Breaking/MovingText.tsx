@@ -2,11 +2,13 @@ import React from "react";
 import Marquee from "../ui/Infinitemovingcr";
 
 const reviews = [
-  "“Kekius Maximus Is Cunt” - Parthia Kingdom",
-  "$PEPA Is Building SupaDapp!",
+  "Pepius is cooking SupaDapp",
+  "AI or memecoins: $PECA combines both",
+  "The world’s first ever “Truly” crypto superapp PRESALE is live!",
+  "Get in EARLY and buy tokens at dirt-cheap rate!"
 ];
 
-const MovingText = () => {
+const  MovingText = () => {
   return (
     <div
       className="w-full 
@@ -26,7 +28,7 @@ const MovingText = () => {
       <Marquee className="[--duration:20s] [--gap:1.5rem] md:[--gap:4rem]">
         {reviews.map((review, index) => (
           <p
-            className="text-background font-grandstander-regular_400 text-[20px] leading-normal tracking-[1.2px]"
+            className="text-background font-grandstander-regular_400 text-[16px] xl:text-[20px] leading-normal tracking-[1.2px]"
             key={index}
           >
             {" "}

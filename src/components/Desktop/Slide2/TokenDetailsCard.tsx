@@ -3,7 +3,7 @@ import React from "react";
 const TokenDetailsCard = ({ title, desc }: { title: string; desc: string }) => {
   return (
     <div
-      className="p-6 flex flex-col items-center justify-center gap-5 border-[4px] border-solid border-primary rounded-[24px] bg-green"
+      className="p-6 flex xl:w-auto w-full flex-col items-center justify-center gap-5 border-[4px] border-solid border-primary rounded-[24px] bg-background"
       style={{
         boxShadow: "4px 4px 0px 0px #FFD700",
       }}
