@@ -21,7 +21,7 @@ const Reward = () => {
           paintOrder: "stroke fill",
         }}
       >
-        127%
+        4000%
       </p>
     </div>
   );

@@ -24,7 +24,7 @@ const PecaTokenomics = () => {
         />
         <Content />
       </div>
-      <div className=" flex w-full items-center flex-row">
+      <div className=" flex w-full items-center flex-row mt-5 relative left-[-50px]">
         <Image
           src={"/images/Images/Slide3Image1.png"}
           alt="pecatokenomics"
@@ -32,7 +32,7 @@ const PecaTokenomics = () => {
           height={199}
           className="z-50"
         />
-        <div className="relative w-auto left-[-18 %] ">
+        <div className="relative w-auto left-[-80px] ">
           <p className="text-background z-30 text-[18px] font-grandstander-medium_500 leading-[125%] absolute top-0 left-0 px-8 py-5  ">
             Nice try, Didddy!
           </p>

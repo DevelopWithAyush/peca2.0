@@ -46,7 +46,7 @@ const Accordian = ({ title, desc }: { title: string; desc: string }) => {
     >
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex flex-row items-center justify-between p-6 "
+        className="w-full flex flex-row items-center justify-between p-4 xl:p-6 "
       >
         <p
           className={cn(
@@ -63,7 +63,7 @@ const Accordian = ({ title, desc }: { title: string; desc: string }) => {
             e.preventDefault();
             setIsOpen(!isOpen);
           }}
-          className="p-[8px] rounded-full border-background border-solid bg-text aspect-square"
+          className="p-[8px] rounded-full border-background border-solid bg-text aspect-square scale-[80%] xl:scale-[100%]"
           whileHover={{ scale: 1.1 }} // Hover effect
           whileTap={{ scale: 0.9 }}
           style={{

@@ -23,7 +23,7 @@ const Content = () => {
         </p>
       </button>
       <div className="flex flex-col items-start justify-start  gap-y-8 xl:max-w-[38vw] w-full  ">
-        <p className="text-[18px] font-grandstander-medium_500 text-text leading-[160%] ">
+        <p className="text-[18px]  font-grandstander-medium_500 text-text leading-[160%] ">
           Frustrated with juggling multiple dApps to perform even basic
           operations in web3, Pepius is set to launch
         </p>
@@ -57,7 +57,7 @@ const Content = () => {
           </span>
           <span>in one, organized place.</span>
         </div>
-        <div className="  text-text font-grandstander-medium_500  ">
+        <div className="  text-text font-grandstander-medium_500 text-[18px]  ">
           Pepius Caesar’s{" "}
           <span className="text-primary font-grandstander-medium_500 leading-[160%] text-[24px] ">
             {" "}

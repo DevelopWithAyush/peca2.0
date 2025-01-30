@@ -1,46 +1,46 @@
 import Image from "next/image";
 import RoadMapCard from "./RoadMapCard";
 
-const phases = [
-    {
-        phase: 1,
-        title: "Presale Process",
-        details: [
-            "Memetic branding of the project",
-            "Smart contract audit and security",
-            "Launch of the SPECA token during the presale",
-            "Community growth through large-scale worldwide marketing campaigns"
-        ]
-    },
-    {
-        phase: 2,
-        title: "Token Launch and Listings",
-        details: [
-            "Token generation event",
-            "Listings on DEX and CEX platforms",
-            "Community participation",
-            "Focus on maintaining healthy financial indicators"
-        ]
-    },
-    {
-        phase: 3,
-        title: "SupaDapp Launch",
-        details: [
-            "SupaDapp launch with extensive global marketing",
-            "Continuous onboarding and integration of dApps",
-            "Product enhancements and new feature rollouts"
-        ]
-    },
-    {
-        phase: 4,
-        title: "Ecosystem Enhancements",
-        details: [
-            "Multifold growth in downloads and active users",
-            "Partnership development",
-            "Continuous improvements to maintain industry leadership"
-        ]
-    }
-];
+  const phases = [
+      {
+          phase: 1,
+          title: "Presale Process",
+          details: [
+              "Memetic branding of the project",
+              "Smart contract audit and security",
+              "Launch of the SPECA token during the presale",
+              "Community growth through large-scale worldwide marketing campaigns"
+          ]
+      },
+      {
+          phase: 2,
+          title: "Token Launch and Listings",
+          details: [
+              "Token generation event",
+              "Listings on DEX and CEX platforms",
+              "Community participation",
+              "Focus on maintaining healthy financial indicators"
+          ]
+      },
+      {
+          phase: 3,
+          title: "SupaDapp Launch",
+          details: [
+              "SupaDapp launch with extensive global marketing",
+              "Continuous onboarding and integration of dApps",
+              "Product enhancements and new feature rollouts"
+          ]
+      },
+      {
+          phase: 4,
+          title: "Ecosystem Enhancements",
+          details: [
+              "Multifold growth in downloads and active users",
+              "Partnership development",
+              "Continuous improvements to maintain industry leadership"
+          ]
+      }
+  ];
 
 const Content = () => {
   return (

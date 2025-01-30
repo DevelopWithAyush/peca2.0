@@ -3,7 +3,7 @@ import { MinusIcon, PlusIcon } from "@/VectorImages/Image";
 import { AnimatePresence, motion } from "framer-motion"; // For advanced animations
 import { useEffect, useRef, useState } from "react";
 
-const AccordianFaq = ({
+const  AccordianFaq = ({
   title,
   desc,
   index,
@@ -48,11 +48,11 @@ const AccordianFaq = ({
     >
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex flex-row items-center justify-between p-6 "
+        className="w-full flex flex-row items-center justify-between p-4 xl:p-6 "
       >
         <p
           className={cn(
-            "text-text font-grandstander-bold_700 leading-[160%] text-[24px]"
+            "text-text font-grandstander-bold_700 leading-[160%] text-[18px] xl:text-[24px]"
           )}
         >
           {title}
@@ -62,7 +62,7 @@ const AccordianFaq = ({
             e.preventDefault();
             setIsOpen(!isOpen);
           }}
-          className="p-[8px] rounded-full border-background border-solid bg-text aspect-square"
+          className="p-[8px] rounded-full border-background border-solid bg-text aspect-square scale-[80%] xl:scale-[100%]"
           whileHover={{ scale: 1.1 }} // Hover effect
           whileTap={{ scale: 0.9 }} // Tap effect
           style={{
@@ -89,7 +89,7 @@ const AccordianFaq = ({
           >
             <motion.p
               className={cn(
-                "text-[16px] font-grandstander-medium_500 text-text leading-[160%] rounded-t-[24px] p-6",
+                "text-[14px] xl:text-[16px] font-grandstander-medium_500 text-text leading-[160%] rounded-t-[24px] p-6",
                 index % 3 === 0 && "bg-secondary ",
                 index % 3 === 1 && "bg-text text-background",
                 index % 3 === 2 && "bg-primary text-background"
