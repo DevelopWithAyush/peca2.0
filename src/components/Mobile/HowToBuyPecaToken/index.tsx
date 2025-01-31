@@ -1,12 +1,13 @@
 "use client";
 import Accordian from "@/components/Desktop/Slide2/Accordian";
+import TokenBuyCharacter from "@/components/Desktop/Slide2/TokenBuyCharacter";
 import TokenDetailsCard from "@/components/Desktop/Slide2/TokenDetailsCard";
 import { VectorButton } from "@/VectorImages/Image";
 import Image from "next/image";
 
 const HowToBuyPecaToken = () => {
   return (
-    <main className="flex flex-col items-start justify-start py-8 px-5 bg-green w-full gap-5">
+    <main className="flex flex-col items-start justify-start pt-8 px-5 bg-green w-full gap-5">
       <p
         className="text-[32px] font-grandstander-black_900 text-secondary "
         style={{
@@ -55,6 +56,7 @@ const HowToBuyPecaToken = () => {
           />
         </div>
       </div>
+      <TokenBuyCharacter />
     </main>
   );
 };

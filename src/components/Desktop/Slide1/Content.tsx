@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Content = () => {
   return (
     <div className="flex flex-col w-full xl:w-auto items-start justify-start gap-y-5 ">
@@ -9,7 +11,7 @@ const Content = () => {
         }}
       >
         <div className="w-[50px] h-[50px] rounded-full  relative bg-white ">
-          {/* <Image src={"/images/Gifs/gola.gif"} alt="gola" fill className="mix-blend-color-burn object-fill "/> */}
+          <Image src={"/images/Gifs/gola.gif"} alt="gola" fill className=" opacity-50  "/>
         </div>
         <p
           className="text-background text-center font-grandstander-bold_700 text-[24px] leading-normal"

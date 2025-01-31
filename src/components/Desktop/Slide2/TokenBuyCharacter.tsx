@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const TokenBuyCharacter = () => {
     return (
-        <div className="flex flex-row items-start absolute bottom-0  right-0 translate-y-[110%]">
+        <div className="flex flex-row items-start xl:absolute xl:bottom-0  right-0 xl:translate-y-[110%]">
             <div className="relative flex flex-row items-end">
                 <div className="relative w-auto">
                     <div className=" absolute w-full px-5  top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex flex-col items-center   ">
                         <p className="text-background font-grandstander-medium_500 leading-[114%] text-[18px] text-balance text-center  ">
                             Dunno about
-                            <span className="text-[16px]"> Wallets?</span>
+                            Wallets?
                         </p>
                         <button className="text-secondary text-[20px] font-grandstander-medium_500 leading-[114%] text-center ">
                             click Here!
@@ -76,7 +76,7 @@ const TokenBuyCharacter = () => {
                     height="56"
                     viewBox="0 0 81 56"
                     fill="none"
-                    className="relative bottom-[10px] left-0"
+                    className="relative bottom-[18px] left-[-10px]"
                 >
                     <g filter="url(#filter0_d_459_11796)">
                         <path
@@ -186,7 +186,7 @@ const TokenBuyCharacter = () => {
 
             <Image
                 src={"/Images/images/Slide2Image3.png"}
-                className="relative right-10"
+                className="relative right-[40%]"
                 width={291}
                 height={297}
                 alt="image"

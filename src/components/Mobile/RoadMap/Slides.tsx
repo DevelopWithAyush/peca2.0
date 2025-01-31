@@ -54,19 +54,22 @@ const phases: Phase[] = [
 
 export default function Slides() {
   const [index, setIndex] = useState<number>(0);
+  const [direction, setDirection] = useState<number>(1); // 1 for next, -1 for previous
 
   const nextSlide = () => {
+    setDirection(1);
     setIndex((prev) => (prev === phases.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
+    setDirection(-1);
     setIndex((prev) => (prev === 0 ? phases.length - 1 : prev - 1));
   };
 
   const handlers = useSwipeable({
     onSwipedLeft: nextSlide,
     onSwipedRight: prevSlide,
-    trackTouch: true, // Valid option
+    trackTouch: true,
   });
 
   return (
@@ -74,23 +77,27 @@ export default function Slides() {
       <AnimatePresence mode="wait">
         <motion.div
           key={phases[index].phase}
-          initial={{ x: "100%", opacity: 0 }}
+          initial={{ x: direction === 1 ? "100%" : "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "-100%", opacity: 0 }}
+          exit={{ x: direction === 1 ? "-100%" : "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
-                  className="w-full h-[265px] bg-green text-white rounded-[24px] p-6 shadow-lg relative border-4 border-solid border-primary"
+          className="w-full h-[265px] bg-green text-white rounded-[24px] p-6 shadow-lg relative border-4 border-solid border-primary"
           style={{
             boxShadow: "4px 4px 0px 0px var(--primary, #FFD700)",
           }}
         >
-          <div className="absolute top-0 -translate-y-[60%] left-5  text-purple-800 text-lg font-bold ">
-                      <Coin number={phases[index].phase}/>
-         
+          <div className="absolute top-0 -translate-y-[60%] left-5 text-purple-800 text-lg font-bold">
+            <Coin number={phases[index].phase} />
           </div>
-          <h2 className="text-[24px]  font-grandstander-bold_700 mb-3 ">{phases[index].title}</h2>
+          <h2 className="text-[24px] font-grandstander-bold_700 mb-3">
+            {phases[index].title}
+          </h2>
           <ul className="space-y-2 text-sm">
             {phases[index].details.map((detail, i) => (
-              <li key={i} className="list-disc ml-5 text-text text-[16px] font-grandstander-medium_500">
+              <li
+                key={i}
+                className="list-disc ml-5 text-text text-[16px] font-grandstander-medium_500"
+              >
                 {detail}
               </li>
             ))}
@@ -106,7 +113,10 @@ export default function Slides() {
             className={`cursor-pointer transition-all duration-300 text-[12px] ${
               i === index ? "text-primary" : "text-primary text-opacity-25"
             }`}
-            onClick={() => setIndex(i)}
+            onClick={() => {
+              setDirection(i > index ? 1 : -1);
+              setIndex(i);
+            }}
           />
         ))}
       </div>
@@ -116,23 +126,18 @@ export default function Slides() {
 
 const Coin = ({ number }: { number: number }) => {
   return (
-    <div className="relative w-auto ">
-          <p className="absolute w-full h-full flex font-grandstander-black_900 px-[32px] py-[26px] text-text text-[24px] leading-[110%]  "
-              style={{
-                  WebkitTextStrokeWidth: "4px",
-                  WebkitTextStrokeColor:"#4B0082",
-                  paintOrder:"stroke fill"
-          }}
-          >
-        {" "}
-        {number}{" "}
+    <div className="relative w-auto">
+      <p
+        className="absolute w-full h-full flex font-grandstander-black_900 px-[32px] py-[26px] text-text text-[24px] leading-[110%]"
+        style={{
+          WebkitTextStrokeWidth: "4px",
+          WebkitTextStrokeColor: "#4B0082",
+          paintOrder: "stroke fill",
+        }}
+      >
+        {number}
       </p>
-      <Image
-        src={"/images/Images/Coin.png"}
-        width={72}
-        height={72}
-        alt="Coin"
-      />
+      <Image src="/images/Images/coin.png" width={72} height={72} alt="Coin" />
     </div>
   );
 };

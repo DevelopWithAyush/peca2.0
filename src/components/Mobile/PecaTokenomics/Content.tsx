@@ -1,6 +1,39 @@
 import React from "react";
 import TokenomicsCard from "./TokenomicsCard";
 
+const data = [
+  {
+    category: "Presale",
+    percentage: "10%",
+    description:
+      "Allocated for early soldiers to join Pepius’s venture at the best entry price.",
+  },
+  {
+    category: "Staking & Rewards",
+    percentage: "10%",
+    description:
+      "Programmed to incentivise committed holders for project’s long term stability.",
+  },
+  {
+    category: "Marketing",
+    percentage: "25%",
+    description:
+      "Earmarked for marketing and community growth initiatives. Feel the storm!",
+  },
+  {
+    category: "Liquidity",
+    percentage: "20%",
+    description:
+      "This allocation is reserved for smooth trading and stable market health at DEXs and CEXs.",
+  },
+  {
+    category: "Project Development",
+    percentage: "35%",
+    description:
+      "Dedicated to the development and continuous enhancement of SupaDapp.",
+  },
+];
+
 const Content = () => {
   return (
     <div
@@ -12,32 +45,19 @@ const Content = () => {
       <p className="text-[24px] leading-[160%] w-full  col-span-2 text-text font-grandstander-bold_700  ">
         The engine that makes the $PECA machine run.
       </p>
-      <TokenomicsCard
-        percentage="35%"
-        title="Project Development "
-        desc="Dedicated to the development and continuous enhancement of SupaDapp"
-      />
-      <TokenomicsCard
-        percentage="35%"
-        title="Project Development "
-        desc="Dedicated to the development and continuous enhancement of SupaDapp"
-      />
-      <TokenomicsCard
-        percentage="35%"
-        title="Project Development "
-        desc="Dedicated to the development and continuous enhancement of SupaDapp"
-      />
-      <TokenomicsCard
-        percentage="35%"
-        title="Project Development "
-        desc="Dedicated to the development and continuous enhancement of SupaDapp"
-      />
-      <TokenomicsCard
-        colspan
-        percentage="35%"
-        title="Project Development "
-        desc="Dedicated to the development and continuous enhancement of SupaDapp"
-      />
+
+      {data.map((items, index) => {
+        return (
+          <TokenomicsCard
+            colspan={data.length === index + 1 }
+            key={index}
+            percentage={items.percentage}
+            title={items.category}
+            desc={items.description}
+          />
+        );
+      })}
+
       <div className="col-span-2 flex flex-col items-start justify-start ">
         <p className="text-[20px] leading-normal text-primary font-grandstander-black_900">
           READ $PECA WHITEPAPER

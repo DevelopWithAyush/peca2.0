@@ -1,5 +1,6 @@
+import { motion } from "motion/react";
+import Image from "next/image";
 import React from "react";
-
 const RoadMapCard = ({
   phase,
   title,
@@ -16,6 +17,33 @@ const RoadMapCard = ({
         boxShadow: "4px 4px 0px 0px #FFD700",
       }}
     >
+      <div className="absolute translate-x-[25%] -translate-y-[60%] top-0 left-0 ">
+        <motion.div
+          animate={{ rotateY: [0, 180, 360] }}
+          transition={{
+            repeat: Infinity, duration: 2, ease: "linear",
+            delay: 0.5 * phase,
+           }}
+        >
+          <p
+            className="text-[24px] text-text font-grandstander-black_900  absolute left-[50%] -translate-x-[50%] top-1/2 -translate-y-1/2"
+            style={{
+              WebkitTextStrokeColor: "#4B0082",
+              WebkitTextStrokeWidth: "4px",
+              paintOrder: "stroke fill",
+            }}
+          >
+            {" "}
+            {phase}{" "}
+          </p>
+          <Image
+            src={"/images/Images/coin.png"}
+            alt="coin"
+            width={72}
+            height={72}
+          />
+        </motion.div>
+      </div>
       <p className="text-text font-grandstander-bold_700 text-[24px] leading-[125%]">
         Phase {phase}: {title}
       </p>

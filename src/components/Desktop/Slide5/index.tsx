@@ -8,10 +8,8 @@ import Image from "next/image";
 const Slide5 = () => {
   return (
     <div className="bg-[url('/images/Background1.png')]   bg-no-repeat bg-contain bg-bottom  relative w-[100vw] overflow-hidden   ">
-      <div className=" w-full bg-background z-[10] ">
         <Header />
         <Breaking />
-      </div>
 
       <div className=" w-full max-w-[88rem] mx-auto px-8 py-[32px] flex flex-col items-start justify-start gap-12 ">
         <div className="flex flex-row items-center justify-between gap-12">
