@@ -185,7 +185,7 @@ const TokenBuyCharacter = () => {
             </div>
 
             <Image
-                src={"/Images/images/Slide2Image3.png"}
+                src={"/images/Images/Slide2Image3.png"}
                 className="relative right-[40%]"
                 width={291}
                 height={297}
