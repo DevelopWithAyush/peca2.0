@@ -1,3 +1,4 @@
+import FadeInOut from "@/components/ui/FadeInOut";
 import Image from "next/image";
 
 const Content = () => {
@@ -11,7 +12,12 @@ const Content = () => {
         }}
       >
         <div className="w-[50px] h-[50px] rounded-full  relative bg-white ">
-          <Image src={"/images/Gifs/gola.gif"} alt="gola" fill className=" opacity-50  "/>
+          <Image
+            src={"/images/Gifs/gola.gif"}
+            alt="gola"
+            fill
+            className=" opacity-50  "
+          />
         </div>
         <p
           className="text-background text-center font-grandstander-bold_700 text-[24px] leading-normal"
@@ -42,20 +48,20 @@ const Content = () => {
         <div className="flex flex-row items-center flex-wrap gap-y-3 justify-start gap-[11px] text-text text-[18px] font-grandstander-medium_500 ">
           <span>All your</span>
           <span className="py-2 px-6 bg-green rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-text">
-            Gaming
+            <FadeInOut text="Gaming" />
           </span>
           <span className="py-2 px-6 bg-border rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-text">
-            DeFinance
+            <FadeInOut text="DeFinance" />
           </span>
           <span className="py-2 px-6 bg-primary  rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-background">
-            Entertainment
+            <FadeInOut text="Entertainment" />
           </span>
           <span className="py-2 px-6 bg-secondary  rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-text">
-            Investing
+            <FadeInOut text="Investing" />
           </span>
           <span>and</span>
           <span className="py-2 px-6 bg-text  rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-background">
-            Trading
+            <FadeInOut text="Trading" />
           </span>
           <span>in one, organized place.</span>
         </div>
@@ -75,7 +81,7 @@ const Content = () => {
           </span>
         </div>
       </div>
-      <button className="self-center mt-6 relative">
+      <button className="self-center mt-6 relative group">
         <Button />
         <p className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[25%] font-grandstander-medium_500 leading-[160%] text-[20px] text-background h-full">
           Join the $PECA Legion!{" "}
@@ -89,63 +95,39 @@ export default Content;
 
 const Button = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="290"
-      height="74"
-      viewBox="0 0 290 74"
-      fill="none"
-      style={{
-        filter: "drop-Shadow(-2px 8px 0px #A26CD9)",
-      }}
-    >
-      <g filter="url(#filter0_d_459_11759)">
-        <path
-          d="M4.90018 63.5272C4.90018 63.5272 3.94265 38.2085 4.90018 26.3429C5.85771 14.4774 14.9011 9.00423 27.3424 7.95973C39.7836 6.91522 286.475 2.52832 286.475 2.52832C286.475 2.52832 278.695 34.7825 271.513 47.6508C264.332 60.519 247.774 63.5968 240.393 63.5272C233.012 63.4575 4.90018 63.5272 4.90018 63.5272Z"
-          fill="#FFD700"
-        />
-        <path
-          d="M4.90018 63.5272C4.90018 63.5272 3.94265 38.2085 4.90018 26.3429C5.85771 14.4774 14.9011 9.00423 27.3424 7.95973C39.7836 6.91522 286.475 2.52832 286.475 2.52832C286.475 2.52832 278.695 34.7825 271.513 47.6508C264.332 60.519 247.774 63.5968 240.393 63.5272C233.012 63.4575 4.90018 63.5272 4.90018 63.5272Z"
-          stroke="#9966CC"
-          stroke-width="4"
-        />
-      </g>
-      <defs>
-        {/* <filter
-          id="filter0_d_459_11759"
-          x="0.474609"
-          y="0.482666"
-          width="288.551"
-          height="73.0457"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
+    <div className="group inline-block">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="290"
+        height="74"
+        viewBox="0 0 290 74"
+        fill="none"
+        style={{
+          filter: "drop-shadow(-2px 8px 0px #A26CD9)",
+        }}
+      >
+        <defs>
+          <linearGradient id="hoverGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="31.35%" stopColor="#FFD700" />
+            <stop offset="98.76%" stopColor="#9966CC" />
+          </linearGradient>
+        </defs>
+
+        <g filter="url(#filter0_d_459_11759)">
+          <path
+            d="M4.90018 63.5272C4.90018 63.5272 3.94265 38.2085 4.90018 26.3429C5.85771 14.4774 14.9011 9.00423 27.3424 7.95973C39.7836 6.91522 286.475 2.52832 286.475 2.52832C286.475 2.52832 278.695 34.7825 271.513 47.6508C264.332 60.519 247.774 63.5968 240.393 63.5272C233.012 63.4575 4.90018 63.5272 4.90018 63.5272Z"
+            fill="#FFD700"
+            className="transition-all duration-500 ease-in-out group-hover:fill-[url(#hoverGradient)]"
           />
-          <feOffset dx="-2" dy="8" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.63567 0 0 0 0 0.424748 0 0 0 0 0.849137 0 0 0 1 0"
+          <path
+            d="M4.90018 63.5272C4.90018 63.5272 3.94265 38.2085 4.90018 26.3429C5.85771 14.4774 14.9011 9.00423 27.3424 7.95973C39.7836 6.91522 286.475 2.52832 286.475 2.52832C286.475 2.52832 278.695 34.7825 271.513 47.6508C264.332 60.519 247.774 63.5968 240.393 63.5272C233.012 63.4575 4.90018 63.5272 4.90018 63.5272Z"
+            stroke="#9966CC"
+            strokeWidth="4"
           />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_459_11759"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_459_11759"
-            result="shape"
-          />
-        </filter> */}
-      </defs>
-    </svg>
+        </g>
+      </svg>
+    </div>
+
+
   );
 };

@@ -22,6 +22,7 @@ const MovingStar = () => {
               height={488}
               src={"/images/Images/star.png"}
               width={211.6}
+              className="rotate-180"
             />
           </div>
         ))}

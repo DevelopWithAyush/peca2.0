@@ -8,6 +8,7 @@ import MenuIcon from "./MenuIcon";
 import { useState } from "react";
 import MobileNavbar from "./MobileNavbar";
 import MovingStar from "../common/MovingStar";
+import { motion } from "motion/react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,9 +56,22 @@ const Header = () => {
               />
             </div>
             <div className="flex flex-col items-end">
-              <p className="px-[5px]  text-green text-[9px] font-grandstander-medium_500 whitespace-nowrap leading-[110%] ">
+              <motion.p
+                initial={{
+                  color: "#EF4444", // Start with red
+                }}
+                animate={{
+                  color: "#22C55E", // Animate to green
+                }}
+                transition={{
+                  duration: 1, // Animation duration in seconds
+                  repeat: Infinity, // Repeat the animation infinitely
+                  ease :"linear",
+                }}
+                className="px-[5px] text-[9px] font-grandstander-medium_500 whitespace-nowrap leading-[110%] inline-block"
+              >
                 Coming Soon
-              </p>
+              </motion.p>
               <p className="px-1  text-[16px] font-grandstander-medium_500 text-background leading-[140%] hover:text-secondary duration-300 ease-in-out  ">
                 SupaDapp
               </p>
@@ -69,9 +83,22 @@ const Header = () => {
           <NavLink title="FAQs" link={"/faqs"} />
           <Link href={"/"} className="flex flex-row items-end justify-center  ">
             <div className="flex flex-col items-end">
-              <p className="px-[5px]  text-green text-[9px] font-grandstander-medium_500 whitespace-nowrap leading-[110%] ">
+              <motion.p
+                initial={{
+                  color: "#EF4444", // Start with red
+                }}
+                animate={{
+                  color: "#22C55E", // Animate to green
+                }}
+                transition={{
+                  duration: 1, // Animation duration in seconds
+                  repeat: Infinity, // Repeat the animation infinitely
+                  ease: "linear",
+                }}
+                className="px-[5px] text-[9px] font-grandstander-medium_500 whitespace-nowrap leading-[110%] inline-block"
+              >
                 Coming Soon
-              </p>
+              </motion.p>
               <p className="px-1  text-[16px] font-grandstander-medium_500 text-background  leading-[140%] hover:text-secondary duration-300 ease-in-out  ">
                 Staking
               </p>
@@ -84,11 +111,18 @@ const Header = () => {
         <div className=" hidden flex-row items-center justify-start gap-4 xl:flex">
           <XIcon />
           <TelegramIcon />
-          <button className="text-[18px] leading-[160%] text-background font-grandstander-medium_500 px-8 py-2 bg-primary rounded-[8px] flex flex-col items-center justify-center">
+          <button
+          
+            className="text-[18px] leading-[160%] text-background font-grandstander-medium_500 px-8 py-2  duration-500 ease-in-out
+            hover:bg-[linear-gradient(100deg,#FFD700_31.35%,#96C_98.76%)] 
+            bg-primary rounded-[8px] flex flex-col items-center justify-center">
             Audit
           </button>
           <button
-            className="text-[22px] leading-[160%] text-text font-grandstander-medium_500 px-8 py-[5px] bg-green rounded-[8px] flex flex-col items-center justify-center "
+            className="text-[22px]
+            duration-500 ease-in-out
+            hover:bg-[linear-gradient(100deg,#55A330_31.35%,#96C_98.76%)] 
+            leading-[160%] text-text font-grandstander-medium_500 px-8 py-[5px] bg-green rounded-[8px] flex flex-col items-center justify-center "
             style={{
               WebkitTextStrokeWidth: "5px",
               WebkitTextStrokeColor: "#4B0082",
@@ -128,7 +162,7 @@ const Header = () => {
         </button>
       </header>
       <MobileNavbar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <MovingStar/>
+      <MovingStar />
     </div>
   );
 };

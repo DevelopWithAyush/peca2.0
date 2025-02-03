@@ -1,4 +1,4 @@
-import TokenBox from "@/components/common/TokenBox";
+import TokenBox from "@/components/common/TokenBox/TokenBox";
 import Reward from "./Reward";
 import Content from "@/components/Desktop/Slide1/Content";
 import Image from "next/image";
