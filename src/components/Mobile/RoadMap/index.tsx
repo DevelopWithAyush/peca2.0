@@ -4,7 +4,7 @@ import Slides from "./Slides";
 
 const RoadMap = () => {
   return (
-    <section className=" flex flex-col items-start justify-start  py-8 px-5 bg-background w-full gap-4">
+    <section id="roadmap" className=" flex flex-col items-start justify-start  py-8 px-5 bg-background w-full gap-4">
       <p
         className="text-[32px] font-grandstander-black_900 leading-normal text-secondary "
         style={{

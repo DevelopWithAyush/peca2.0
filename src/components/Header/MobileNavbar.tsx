@@ -106,49 +106,61 @@ const MobileNavbar = ({
             <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
               href={"/"}
+              onClick={() => setIsOpen(false)}
             >
               SupaDapp
             </Link>
             <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
-              href={"/"}
+              href={"#how-to-buy"}
+              onClick={() => setIsOpen(false)}
             >
               How To Buy
             </Link>
             <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
-              href={"/"}
+              href={"#tokenomics"}
+              onClick={() => setIsOpen(false)}
             >
               Tokenomics
             </Link>
             <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
-              href={"/"}
+              href={"#faqs"}
+              onClick={() => setIsOpen(false)}
             >
               FAQ’s
             </Link>
-            <Link
+            {/* <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
-              href={"/"}
+              href={"#staking"}
             >
               Staking
-            </Link>
+            </Link> */}
             <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
-              href={"/"}
+              href={"#roadmap"}
+              onClick={() => setIsOpen(false)}
             >
               Roadmap
             </Link>
             <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
-              href={"/"}
+              href={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"}
+              target="_blank"
+              onClick={() => setIsOpen(false)}
             >
               WhitePaper
             </Link>
                   </div>
                   <div className="flex flex-row items-center justify-start gap-4 ">
+            <Link href={"https://x.com/Pepius_Caesar"} target="_blank">
                       <XIcon />
+            </Link>
+            <Link href={"https://t.me/pepiuscaesar_discussions"} target="_blank">
+            
                       <TelegramIcon />
+            </Link>
                       <button className="flex flex-row items-center justify-between w-[79px]">
                           <div className="text-[16px] py-[7px] px-[16px] border-[2px] border-solid border-background text-background font-grandstander-medium_500 rounded-[8px] ">
                               En

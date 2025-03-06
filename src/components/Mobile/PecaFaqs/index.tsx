@@ -28,7 +28,7 @@ const FaqData = [
 
 const PecaFaqs = () => {
   return (
-    <section className="bg-green pb-8 px-5 w-full">
+    <section id="faqs" className="bg-green pb-8 px-5 w-full">
       <div className=" flex  flex-row items-center justify-between w-full ">
         <p
           className="text-secondary text-[32px] font-grandstander-black_900 leading-normal "

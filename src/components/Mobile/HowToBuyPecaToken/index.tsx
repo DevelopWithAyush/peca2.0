@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const HowToBuyPecaToken = () => {
   return (
-    <main className="flex flex-col items-start justify-start pt-8 px-5 bg-green w-full gap-5">
+    <main id="how-to-buy" className="flex flex-col items-start justify-start pt-8 px-5 bg-green w-full gap-5">
       <p
         className="text-[32px] font-grandstander-black_900 text-secondary "
         style={{

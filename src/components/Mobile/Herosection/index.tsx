@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Herosection = () => {
   return (
-    <main className="flex flex-col items-center justify-start px-5 pt-8 gap-5 bg-background w-full ">
+    <main id="hero-section" className="flex flex-col items-center justify-start px-5 pt-8 gap-5 bg-background w-full ">
       <TokenBox />
       <Reward />
       <Content />

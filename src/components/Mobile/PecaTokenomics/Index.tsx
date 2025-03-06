@@ -4,7 +4,7 @@ import { VectorButton } from "@/VectorImages/Image";
 
 const PecaTokenomics = () => {
   return (
-    <section className="flex flex-col items-start justify-start w-full px-5 pt-8">
+    <section id="tokenomics" className="flex flex-col items-start justify-start w-full px-5 pt-8">
       <p
         className="text-[32px] text-secondary font-grandstander-black_900 "
         style={{

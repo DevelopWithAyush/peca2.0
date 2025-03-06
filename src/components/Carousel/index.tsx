@@ -1,12 +1,14 @@
 "use client";
+
 import { DownArrow } from "@/VectorImages/Image";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Slide1 from "../Desktop/Slide1";
 import Slide2 from "../Desktop/Slide2";
 import Slide3 from "../Desktop/Slide3";
 import Slide4 from "../Desktop/Slide4";
 import Slide6 from "../Desktop/Slide6";
+import { HandleContext } from "@/hooks/handleState";
 
 const Carousel: React.FC = () => {
   const slides = [
@@ -19,24 +21,8 @@ const Carousel: React.FC = () => {
     // <Slide7 key={6} />,
   ];
 
-  const playSound = () => {
-    const audio = new Audio("/Sound/click.mp3"); // Path to the audio file
-    audio.play();
-  };
+  const { currentIndex, nextSlide, prevSlide } = useContext(HandleContext);
 
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-  const nextSlide = (): void => {
-    playSound();
-    setCurrentIndex(
-      currentIndex === slides.length - 1 ? currentIndex : currentIndex + 1
-    );
-  };
-
-  const prevSlide = (): void => {
-    playSound();
-    setCurrentIndex(currentIndex === 0 ? currentIndex : currentIndex - 1);
-  };
 
   const variants = {
     initial: { opacity: 0, scale: 1.05 },
@@ -57,7 +43,7 @@ const Carousel: React.FC = () => {
             border-[2px] 
             border-solid border-background transform -translate-y-1/2 ${currentIndex === 0 ? "hidden" : "block"
             }`}
-          onClick={prevSlide}
+          onClick={() => prevSlide(slides.length)}
           style={{
             boxShadow: "0px 2px 10px 0px rgba(253, 253, 253, 0.52)",
           }}
@@ -95,7 +81,7 @@ const Carousel: React.FC = () => {
             border-background 
             transform -translate-y-1/2 text-text ${currentIndex === slides.length - 1 ? "hidden" : "block"
             }`}
-          onClick={nextSlide}
+          onClick={() => nextSlide(slides.length)}
           style={{
             boxShadow: "0px 2px 10px 0px rgba(253, 253, 253, 0.52)",
           }}

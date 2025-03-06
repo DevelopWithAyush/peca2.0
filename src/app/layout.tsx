@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { HandleState } from "@/hooks/handleState";
 
 export const metadata: Metadata = {
   title: "Peca",
@@ -13,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <HandleState>
+          {children}
+        </HandleState>
+      </body>
     </html>
   );
 }

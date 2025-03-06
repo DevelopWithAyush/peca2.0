@@ -1,17 +1,19 @@
 "use client";
+import { HandleContext } from "@/hooks/handleState";
+import { motion } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
+import { useContext, useState } from "react";
+import MovingStar from "../common/MovingStar";
+import MenuIcon from "./MenuIcon";
+import MobileNavbar from "./MobileNavbar";
 import NavLink from "./NavLink";
 import TelegramIcon from "./TelegramIcon";
 import XIcon from "./XIcon";
-import MenuIcon from "./MenuIcon";
-import { useState } from "react";
-import MobileNavbar from "./MobileNavbar";
-import MovingStar from "../common/MovingStar";
-import { motion } from "motion/react";
+import Link from "next/link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+    const { pageJump } = useContext(HandleContext);
   return (
     <div className="xl:p-8 px-5 py-4 w-full">
       <header className="   z-10 flex flex-row justify-between items-center  w-full rounded-[56px] border-[4px] border-solid border-border bg-text px-5 py-2  xl:px-8 xl:py-3 ">
@@ -45,7 +47,7 @@ const Header = () => {
           </div>
         </div>
         <nav className="hidden flex-row items-end  justify-start gap-2 w-auto xl:flex">
-          <Link href={"/"} className="flex flex-row items-end justify-center  ">
+          <button  className="flex flex-row items-end justify-center  ">
             <div className="w-[24px] h-[24px] relative">
               <Image
                 src="/images/Gifs/fire.png"
@@ -76,11 +78,17 @@ const Header = () => {
                 SupaDapp
               </p>
             </div>
-          </Link>
+          </button>
+          <button onClick={() => pageJump(1)}>
+            <NavLink title="how to buy" />
+          </button>
 
-          <NavLink title="how to buy" link={"/how-to-buy"} />
-          <NavLink title="Tokenomics" link={"/tokenomics"} />
-          <NavLink title="FAQs" link={"/faqs"} />
+          <button onClick={() => pageJump(2)}>
+            <NavLink title="Tokenomics" />
+          </button>
+          <button onClick={() => pageJump(3)}>
+            <NavLink title="FAQs" />
+          </button>
           {/* <Link href={"/"} className="flex flex-row items-end justify-center  ">
             <div className="flex flex-col items-end">
               <motion.p
@@ -105,12 +113,20 @@ const Header = () => {
             </div>
           </Link> */}
 
-          <NavLink title="Roadmap" link={"/roadmap"} />
-          <NavLink title="Whitepaper" link={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"} />
+          <button onClick={() => pageJump(4)}>
+            <NavLink   title="Roadmap" />
+          </button>
+          <Link href={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"} target="_blank">
+            <NavLink title="Whitepaper" />
+          </Link>
         </nav>
         <div className=" hidden flex-row items-center justify-start gap-4 xl:flex">
+          <Link href={"https://x.com/Pepius_Caesar"} target="_blank">
           <XIcon />
+          </Link>
+          <Link href={"https://t.me/pepiuscaesar_discussions"} target="_blank">
           <TelegramIcon />
+          </Link>
           <button
           
             className="text-[18px] leading-[160%] text-background font-grandstander-medium_500 px-8 py-2  duration-500 ease-in-out
