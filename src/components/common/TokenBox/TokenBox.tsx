@@ -56,18 +56,18 @@ const TokenBox = () => {
       </div>
       <div className="bg-text p-4  xl:p-4 w-full xl:w-[418px]  rounded-[32px] flex flex-col items-center justify-start  ">
         <p
-          className="text-primary whitespace-nowrap font-grandstander-black_900 leading-[110%] text-[24px] xl:text-[32px]  "
+          className="text-primary text-center  font-grandstander-black_900 leading-[110%] text-[32px] xl:text-[32px]  "
           style={{
             WebkitTextStrokeWidth: "4px",
             WebkitTextStrokeColor: "#4B0082",
             paintOrder: "stroke fill",
           }}
         >
-          BUY $PECA IN PRESALE
+          $PECA PUBLIC SALE COUNTDOWN
         </p>
-        <p className="text-background text-[16px] font-grandstander-bold_700 leading-[125%]">
+        {/* <p className="text-background text-[16px] font-grandstander-bold_700 leading-[125%]">
           Current Phase PRESALE STAGE 3
-        </p>
+        </p> */}
         <Time />
         {/* <div className="flex flex-col items-center justify-center mt-3">
           <p className="text-background font-grandstander-bold_700 text-[18px] leading-[125%] ">

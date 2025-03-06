@@ -3,34 +3,40 @@ import TokenomicsCard from "./TokenomicsCard";
 
 const data = [
   {
-    category: "Presale",
-    percentage: "10%",
+    category: "Liquidity",
+    percentage: "15%",
     description:
-      "Allocated for early soldiers to join Pepius’s venture at the best entry price.",
+      "This allocation is reserved for smooth trading and stable market health at DEXs and CEXs.",
   },
   {
-    category: "Staking & Rewards",
+    category: "Partnership",
     percentage: "10%",
     description:
-      "Programmed to incentivise committed holders for project’s long term stability.",
+      "Suitably planned for partnering with launchpads and other players",
   },
   {
     category: "Marketing",
-    percentage: "25%",
+    percentage: "20%",
     description:
       "Earmarked for marketing and community growth initiatives. Feel the storm!",
   },
   {
-    category: "Liquidity",
-    percentage: "20%",
+    category: "Investors",
+    percentage: "15%",
     description:
-      "This allocation is reserved for smooth trading and stable market health at DEXs and CEXs.",
+      "Allocated for early soldiers to join Pepius’s venture before it’s public launch.",
   },
   {
     category: "Project Development",
     percentage: "35%",
     description:
       "Dedicated to the development and continuous enhancement of SupaDapp.",
+  },
+  {
+    category: "Community Incentives",
+    percentage: "5%",
+    description:
+      "Programmed to incentivise committed community members for project’s long term stability.",
   },
 ];
 
@@ -49,7 +55,7 @@ const Content = () => {
       {data.map((items, index) => {
         return (
           <TokenomicsCard
-            colspan={data.length === index + 1 }
+            // colspan={data.length === index + 1 }
             key={index}
             percentage={items.percentage}
             title={items.category}

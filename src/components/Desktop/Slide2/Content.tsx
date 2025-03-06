@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TokenDetailsCard from "./TokenDetailsCard";
 import Accordian from "./Accordian";
 import Image from "next/image";
@@ -6,6 +6,51 @@ import { VectorButton } from "@/VectorImages/Image";
 import TokenBuyCharacter from "./TokenBuyCharacter";
 
 const Content = () => {
+
+  const [targetDate] = useState(() => {
+    const date = new Date('2025-04-06T00:00:00')
+    return date.getTime()
+  })
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00'
+  })
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date().getTime()
+      const distance = targetDate - now
+
+      // Calculate time units
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+      // Only update if the countdown hasn't finished
+      if (distance > 0) {
+        setTimeLeft({
+          days: days.toString().padStart(2, '0'),
+          hours: hours.toString().padStart(2, '0'),
+          minutes: minutes.toString().padStart(2, '0'),
+          seconds: seconds.toString().padStart(2, '0')
+        })
+      } else {
+        clearInterval(timer)
+        setTimeLeft({
+          days: '00',
+          hours: '00',
+          minutes: '00',
+          seconds: '00'
+        })
+      }
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [targetDate])
   return (
     <div className="flex flex-col items-start justify-start gap-12 pt-[13.5px] relative">
       <p
@@ -30,7 +75,7 @@ const Content = () => {
           />
 
           <TokenDetailsCard
-            title="After ((countdown)) "
+            title={`After ${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
             desc="On Raydium DEX"
           />
           {/* <TokenDetailsCard

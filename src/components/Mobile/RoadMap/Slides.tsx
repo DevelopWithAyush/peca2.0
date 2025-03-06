@@ -19,7 +19,7 @@ const phases: Phase[] = [
       "Memetic branding of the project",
       "Smart contract audit and security",
       "Launch of the SPECA token during the presale",
-      "Community growth through large-scale worldwide marketing campaigns",
+      "Partnerships with launchpads and community growth efforts.",
     ],
   },
   {
