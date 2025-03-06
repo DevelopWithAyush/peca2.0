@@ -15,8 +15,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
     const { pageJump } = useContext(HandleContext);
   return (
-    <div className="xl:p-8 px-5 py-4 w-full">
-      <header className="   z-10 flex flex-row justify-between items-center  w-full rounded-[56px] border-[4px] border-solid border-border bg-text px-5 py-2  xl:px-8 xl:py-3 ">
+    <div className="xl:p-8 px-5 py-2 w-full">
+      <header className="z-10 flex flex-row justify-between items-center  w-full rounded-[56px] border-[4px] border-solid border-border bg-text px-5 py-2  xl:px-8 xl:py-3 ">
         <div className="flex flex-row items-center justify-start  gap-0">
           <img
             src={"/images/logo.png"}
