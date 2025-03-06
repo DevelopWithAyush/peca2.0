@@ -81,7 +81,7 @@ const Header = () => {
           <NavLink title="how to buy" link={"/how-to-buy"} />
           <NavLink title="Tokenomics" link={"/tokenomics"} />
           <NavLink title="FAQs" link={"/faqs"} />
-          <Link href={"/"} className="flex flex-row items-end justify-center  ">
+          {/* <Link href={"/"} className="flex flex-row items-end justify-center  ">
             <div className="flex flex-col items-end">
               <motion.p
                 initial={{
@@ -103,7 +103,7 @@ const Header = () => {
                 Staking
               </p>
             </div>
-          </Link>
+          </Link> */}
 
           <NavLink title="Roadmap" link={"/roadmap"} />
           <NavLink title="Whitepaper" link={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"} />
