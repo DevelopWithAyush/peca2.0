@@ -106,7 +106,7 @@ const Header = () => {
           </Link>
 
           <NavLink title="Roadmap" link={"/roadmap"} />
-          <NavLink title="Whitepaper" link={"/whitepaper"} />
+          <NavLink title="Whitepaper" link={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"} />
         </nav>
         <div className=" hidden flex-row items-center justify-start gap-4 xl:flex">
           <XIcon />

@@ -49,7 +49,7 @@ const Time = () => {
           </div>
           <div className="flex flex-row items-center justify-center py-[10px] bg-primary w-full ">
               <p className="text-background text-[18px] leading-normal uppercase font-grandstander-bold_700">
-                  Until next price increase
+                  COUNTDOWN For OUR TOKEN LAUNCH
               </p>
           </div>
       </div>

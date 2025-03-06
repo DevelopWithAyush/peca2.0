@@ -13,7 +13,7 @@ const FaqData = [
       "You need to connect your wallet to the official website (double-check the domain URL). Ensure you have Solana from the Solana chain in your wallet. This simplifies the process, as you will need a small gas fee from the Solana network. Then, simply enter your desired amount and buy $PECA. The presale is the only way to get the token at a discounted rate. The price increases in each phase—the earlier you buy, the better.",
   },
   {
-    question: "How do I stake?",
+    question: "What will happen when the countdown ends?",
     answer:
       "Staking, up to xxx%, in the $PECA project allows you to multiply your tokens. Simply click the “Stake $PECA” button to stake your tokens in the staking pool.",
   },

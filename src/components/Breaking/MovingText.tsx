@@ -19,7 +19,7 @@ const  MovingText = () => {
         className="absolute 
       left-0
       top-0
-      z-10
+      z-10 
       h-full
       w-[200px]
       bg-gradient-to-r from-primary to-[#ffffff]/0"

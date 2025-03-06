@@ -20,7 +20,7 @@ const Content = () => {
       </p>
 
       <div className="flex  flex-row items-start justify-start gap-12">
-        <div className="flex flex-col items-start justify-start gap-8 relative ">
+        <div className="flex flex-col items-start justify-start gap-8  ">
           <Image
             src={"/images/Images/Slide2Image2.png"}
             width={225}
@@ -30,15 +30,14 @@ const Content = () => {
           />
 
           <TokenDetailsCard
-            title="Token address"
-            desc="0xccB365D2e11aE4D6d74715c680f56cf58bF4
-                  bF10"
+            title="After ((countdown)) "
+            desc="On Raydium DEX"
           />
-          <TokenDetailsCard
+          {/* <TokenDetailsCard
             title="Token  Supply"
             desc="0xccB365D2e11aE4D6d74715c680f56cf58bF4
                   bF10"
-          />
+          /> */}
           <div className="relative left-10 z-0 w-auto">
             <p className="px-8 py-5 absolute z-40 text-background font-grandstander-medium_500 leading-[160%]">
               Full Tokenomics

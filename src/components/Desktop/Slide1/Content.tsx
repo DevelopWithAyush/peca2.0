@@ -1,3 +1,4 @@
+"use client"
 import FadeInOut from "@/components/ui/FadeInOut";
 import Image from "next/image";
 
@@ -81,12 +82,19 @@ const Content = () => {
           </span>
         </div>
       </div>
-      <button className="self-center mt-6 relative group">
+      <button
+        onClick={() =>
+          window.location.href =
+          "mailto:info@pepiuscaesar.com?subject=Inquiry&body=Hello,"
+        }
+        className="self-center mt-6 relative group"
+      >
         <Button />
         <p className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[25%] font-grandstander-medium_500 leading-[160%] text-[20px] text-background h-full">
-          Join the $PECA Legion!{" "}
+          Connect With Us Today!
         </p>
       </button>
+
     </div>
   );
 };

@@ -1,15 +1,15 @@
 "use client";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Time from "./Time";
-import ProgressBar from "./ProgressBar";
-import { InfoButton, TokenCoin } from "@/VectorImages/Image";
-import Value from "./Value";
-import Input from "./Input";
-import { cn } from "@/lib/utility";
+// import ProgressBar from "./ProgressBar";
+// import { InfoButton, TokenCoin } from "@/VectorImages/Image";
+// import Value from "./Value";
+// import Input from "./Input";
+// import { cn } from "@/lib/utility";
 
 // 定义一个名为TokenBox的函数组件
 const TokenBox = () => {
-  const [isInfoOpen, setIsInfoOpen] = useState("sol");
+  // const [isInfoOpen, setIsInfoOpen] = useState("sol");
   return (
     <div className="xl:w-auto xl:h-auto w-full   bg-primary p-5 xl:p-6 border-[8px] border-solid border-border rounded-[44px] flex flex-col items-center justify-start gap-4  ">
       <div className="bg-background p-[9px] flex flex-row items-center rounded-[32px] justify-start gap-2 relative">
@@ -69,21 +69,21 @@ const TokenBox = () => {
           Current Phase PRESALE STAGE 3
         </p>
         <Time />
-        <div className="flex flex-col items-center justify-center mt-3">
+        {/* <div className="flex flex-col items-center justify-center mt-3">
           <p className="text-background font-grandstander-bold_700 text-[18px] leading-[125%] ">
             USDT Raised : $15,999,268.79 /{" "}
             <span className="text-[#9966CC]">$16,288,989</span>
           </p>
-        </div>
-        <ProgressBar />
-        <div className="flex flex-row items-center justify-center w-full gap-[10px] mt-2">
+        </div> */}
+        {/* <ProgressBar /> */}
+        {/* <div className="flex flex-row items-center justify-center w-full gap-[10px] mt-2">
           <p className="text-background font-grandstander-bold_700 leading-[125%] text-[16px] ">
             Your Purchased $PECA = 0
           </p>
           <InfoButton />
-        </div>
-        <Value />
-        <div className="w-full flex flex-row items-center justify-between gap-4 mt-1">
+        </div> */}
+        {/* <Value /> */}
+        {/* <div className="w-full flex flex-row items-center justify-between gap-4 mt-1">
           <button
             onClick={() => {
               setIsInfoOpen("sol");
@@ -128,12 +128,12 @@ const TokenBox = () => {
               USDC
             </span>
           </button>
-        </div>
-        <div className="w-full mt-2 flex flex-col items-start justify-start gap-2">
+        </div> */}
+        {/* <div className="w-full mt-2 flex flex-col items-start justify-start gap-2">
           <Input />
           <Input />
-        </div>
-        <div className="mt-[14px] flex flex-row items-center justify-between w-full">
+        </div> */}
+        {/* <div className="mt-[14px] flex flex-row items-center justify-between w-full">
           <button
             className="text-[18px] text-text font-grandstander-black_900 leading-[160%] bg-green py-[7px] px-[32px] rounded-[8px] "
             style={{
@@ -147,7 +147,43 @@ const TokenBox = () => {
           <button className="text-[18px] text-background font-grandstander-black_900 leading-[160%] bg-primary py-[7px] px-[32px] rounded-[8px] ">
             Buy with ETH
           </button>
-        </div>
+        </div> */}
+
+        <p className="text-[30px] text-background font-grandstander-black_900 mt-[14px] leading-[156%] text-center"
+          style={{
+            WebkitTextStrokeColor: "#FFD700",
+            WebkitTextStrokeWidth: "4px",
+            paintOrder: "stroke fill",
+          }}
+        >
+          Exclusive Opportunity !
+        </p>
+        <p className="text-primary text-[16px] font-grandstander-bold_700 leading-[125%] text-center mt-[14px]"
+          style={{
+            WebkitTextStrokeColor: "#4B0082",
+            WebkitTextStrokeWidth: "2px",
+            paintOrder: "stroke fill",
+          }}
+        >
+          want to be a part of investor&apos;s round ?
+        </p>
+        <p className="text-primary text-[16px] font-grandstander-black_900 leading-[125%] text-center "
+          style={{
+            WebkitTextStrokeColor: "#4B0082",
+            WebkitTextStrokeWidth: "2px",
+            paintOrder: "stroke fill",
+          }}
+        >
+          Hurry up! Talk to us today!
+        </p>
+
+        <button className="rounded-[8px] bg-background text-white border-[2px] border-solid border-primary text-[16px] font-grandstander-black_900 leading-[125%] text-center py-[14px] px-[32px] mt-[14px] "
+          style={{
+            boxShadow: "2px 2px 0px 0px var(--primary, #FFD700)",
+        }}
+        >
+          Connect Now !
+        </button>
       </div>
     </div>
   );

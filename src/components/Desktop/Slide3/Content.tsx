@@ -16,7 +16,7 @@ const Content = () => {
       </p>
 
       <div
-        className="flex flex-col p-6 border-[4px] border-solid border-primary rounded-[24px] relative  items-start justify-start gap-5 bg-green max-w-[844px] "
+        className="flex flex-col p-6 border-[4px] border-solid border-primary rounded-[24px]  relative  items-start justify-start gap-5 bg-green max-w-[844px] "
         style={{
           boxShadow: "4px 4px 0px 0px #FFD700",
         }}
@@ -38,25 +38,31 @@ const Content = () => {
             desc="Dedicated to the development and continuous enhancement of SupaDapp"
           />
           <TokenomicsDetails
-            percentage="10%"
-            title="Presale "
-            desc="Allocated for early soldiers to join Pepius’s venture at the best entry price."
+            percentage="15%"
+            title="Investors "
+            desc="Allocated for early soldiers to join Pepius’s venture before it’s public launch."
           />
           <TokenomicsDetails
             percentage="10%"
-            title="Staking & Rewards "
-            desc="Programmed to incentivise committed holders for project’s long term stability."
+            title="Partnership"
+            desc="Suitably planned for partnering with launchpads and other players"
           />
           <TokenomicsDetails
-            percentage="25%"
+            percentage="20%"
             title="Marketing  "
             desc="Earmarked for marketing and community growth initiatives. Feel the storm!"
           />
           <TokenomicsDetails
-            colSpan
-            percentage="20%"
+            
+            percentage="15%"
             title="Liquidity "
             desc="This allocation is reserved for smooth trading and stable market health at DEXs and CEXs."
+          />
+          <TokenomicsDetails
+            
+            percentage="5%"
+            title="Community Incentives "
+            desc="Programmed to incentivise committed community members for project’s long term stability."
           />
           {/* <TokenomicsDetails/>
                   <TokenomicsDetails/> */}
@@ -66,14 +72,14 @@ const Content = () => {
             READ $PECA WHITEPAPER
           </p>
           <p className="text-primary font-grandstander-black_900 leading-[110%] text-[24px]">
-            TOTAL TOKEN AMOUNT: 80,000,000,000
+            TOTAL TOKEN AMOUNT: 500,000,000 or 500 Million
           </p>
         </div>
         <Image
           src={"/images/Images/Slide3Image2.png"}
           alt="Slide3Image2"
-          width={326}
-          height={198}
+          width={206}
+          height={108}
           className="absolute right-0 bottom-[0]  translate-x-[15%] z-10 "
         />
       </div>
