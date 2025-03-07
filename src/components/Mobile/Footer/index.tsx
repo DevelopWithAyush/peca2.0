@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <section className="px-10 py-5 flex flex-col items-center justify-start bg-green">
       <p className="text-text text-[12px] font-grandstander-medium_500 leading-[160%]">
-        © {new Date().getFullYear()} Pepe Unchained. All rights reserved.
+        © {new Date().getFullYear()} Pepius Caesar. All rights reserved.
       </p>
       <div className="text-text flex flex-col items-center justify-start gap-0">
         <p className="text-[#FFF] font-grandstander-extrabold_800 leading-[160%] ">
