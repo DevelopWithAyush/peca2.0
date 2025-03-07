@@ -4,11 +4,11 @@ import RoadMapCard from "./RoadMapCard";
   const phases = [
       {
           phase: 1,
-          title: "Presale Process",
+      title: "Pre-launch Process",
           details: [
               "Memetic branding of the project",
               "Smart contract audit and security",
-              "Launch of the SPECA token during the presale",
+              "Launch of the $PECA token’s investor round",
               "Partnerships with launchpads and community growth efforts."
           ]
       },

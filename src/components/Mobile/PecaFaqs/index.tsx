@@ -5,24 +5,29 @@ import React from "react";
 
 const FaqData = [
   {
+    question: "Who is pepius Caeser?",
+    answer:
+      "Pepius Caesar is the right-hand man of Elon’s much-hyped Kekius Maximus. Frustrated with the lack of accessibility and convenience in the web3 world, he launched his new heroic venture to provide the crypto world with an all-in-one app named SupaDapp. His token is $PECA.",
+  },
+  {
     question: "What is SupaDapp?",
     answer:
-      "SupaDapp is an AI-driven crypto superapp that makes onboarding to the web3 world highly accessible and super easy for anyone with an internet connection. It is a backend revolution. Learn more about SupaDapp in the opening pages of the whitepaper.",
+      " SupaDapp is an AI-driven crypto superapp that makes onboarding to the web3 world highly accessible and super easy for anyone with an internet connection. It is a backend revolution. Learn more about SupaDapp in the opening pages of the whitepaper.",
   },
   {
-    question: "How can I buy during the presale?",
+    question: "How can I buy during the Investors’ round?",
     answer:
-      "You need to connect your wallet to the official website (double-check the domain URL). Ensure you have Solana from the Solana chain in your wallet. This simplifies the process, as you will need a small gas fee from the Solana network. Then, simply enter your desired amount and buy $PECA. The presale is the only way to get the token at a discounted rate. The price increases in each phase—the earlier you buy, the better.",
+      "You need to reach out to us at info@pepiuscaesar.com to become an early private investor. Together, we will discuss the prospects of investment. And don’t worry about the minimum or maximum funds you need to invest—we cater to each case on an individual basis.",
   },
   {
-    question: "How do I stake?",
+    question: "What will happen when the countdown ends?",
     answer:
-      "Staking, up to xxx%, in the $PECA project allows you to multiply your tokens. Simply click the “Stake $PECA” button to stake your tokens in the staking pool.",
+      "Once the countdown is complete, our token will be launched on the decentralized exchange (DEX) Raydium. Trading will begin as usual, and we will reach new heights through strategic marketing, partnerships, community rewards, and the continuous development of our utility, SupaDapp. ",
   },
   {
     question: "What makes this project unique?",
     answer:
-      "The world’s first truly crypto super app, combined with advanced AI capabilities and memetic branding, sets us apart. Don’t miss this exclusive opportunity—join us on this revolutionary journey!",
+      "The world’s first truly crypto super app, combined with advanced AI capabilities and memetic branding, sets us apart. Don’t miss this exclusive opportunity—join us on this revolutionary journey! ",
   },
 ];
 

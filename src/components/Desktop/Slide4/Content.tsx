@@ -3,9 +3,14 @@ import AccordianFaq from "./AccordianFaq";
 
 const FaqData = [
   {
+    question: "Who is pepius Caeser?",
+    answer:
+      "Pepius Caesar is the right-hand man of Elon’s much-hyped Kekius Maximus. Frustrated with the lack of accessibility and convenience in the web3 world, he launched his new heroic venture to provide the crypto world with an all-in-one app named SupaDapp. His token is $PECA.",
+  },
+  {
     question: "What is SupaDapp?",
     answer:
-      "SupaDapp is an AI-driven crypto superapp that makes onboarding to the web3 world highly accessible and super easy for anyone with an internet connection. It is a backend revolution. Learn more about SupaDapp in the opening pages of the whitepaper.",
+      " SupaDapp is an AI-driven crypto superapp that makes onboarding to the web3 world highly accessible and super easy for anyone with an internet connection. It is a backend revolution. Learn more about SupaDapp in the opening pages of the whitepaper.",
   },
   {
     question: "How can I buy during the Investors’ round?",
@@ -15,12 +20,12 @@ const FaqData = [
   {
     question: "What will happen when the countdown ends?",
     answer:
-      "Once the countdown is complete, our token will be launched on the decentralized exchange (DEX) Raydium. Trading will begin as usual, and we will reach new heights through strategic marketing, partnerships, community rewards, and the continuous development of our utility, SupaDapp.",
+      "Once the countdown is complete, our token will be launched on the decentralized exchange (DEX) Raydium. Trading will begin as usual, and we will reach new heights through strategic marketing, partnerships, community rewards, and the continuous development of our utility, SupaDapp. ",
   },
   {
     question: "What makes this project unique?",
     answer:
-      "The world’s first truly crypto super app, combined with advanced AI capabilities and memetic branding, sets us apart. Don’t miss this exclusive opportunity—join us on this revolutionary journey!",
+      "The world’s first truly crypto super app, combined with advanced AI capabilities and memetic branding, sets us apart. Don’t miss this exclusive opportunity—join us on this revolutionary journey! ",
   },
 ];
 const Content = () => {
