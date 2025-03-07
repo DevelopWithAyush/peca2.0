@@ -4,7 +4,7 @@ import Marquee from "../ui/Infinitemovingcr";
 const reviews = [
   "Pepius is cooking SupaDapp",
   "AI, utility or memecoins: $PECA combines all",
-  "The world’s first ever “Truly” crypto superapp LAUNCH countdown is live!",
+  "The world’s first ever “Truly” crypto superapp TOKEN LAUNCH countdown is live!",
   "Get in EARLY and be a part of Investors’ round"
 ];
 

@@ -5,6 +5,24 @@ import { useState } from "react";
 
 const Content = () => {
   const [tooltipVisible, setTooltipVisible] = useState(false);
+  
+  // Define the array of words
+  // const categories = [
+  //   "Gaming",
+  //   "DeFinance",
+  //   "Trading",
+  //   "Investing",
+  //   "Entertainment",
+  //   "E-commerce",
+  //   "Hotels & Flights",
+  //   "Lifestyle",
+  //   "Hot News",
+  //   "Crypto AI Agents",
+  //   "NFT Marketplace",
+  //   "Web3 Business Marketplace",
+  //   "Quests",
+  //   "Integrations"
+  // ];
 
   return (
     <div className="flex flex-col w-full xl:w-auto items-start justify-start gap-y-5 ">
@@ -51,7 +69,7 @@ const Content = () => {
         </p>
         <div className="flex flex-row items-center flex-wrap gap-y-3 justify-start gap-[11px] text-text text-[18px] font-grandstander-medium_500 ">
           <span>All your</span>
-          <span className="py-2 px-6 bg-green rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-text">
+           <span className="py-2 px-6 bg-green rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-text">
             <FadeInOut text="Gaming" />
           </span>
           <span className="py-2 px-6 bg-border rounded-[26px] text-[18px] leading-[160%] font-grandstander-medium_500 text-text">
@@ -73,15 +91,16 @@ const Content = () => {
           Pepius Caesar&apos;s{" "}
           <span className="text-primary font-grandstander-medium_500 leading-[160%] text-[24px] ">
             {" "}
-            $PECA presale is live!
-          </span>{" "}
-          Buy now to get $PECA at{" "}
+            $PECA  public sale
+          </span>{" "}   
+          countdown is 
+          {" "}
           <span className="text-primary text-[24px] font-grandstander-medium_500 leading-[160%] ">
-            highly discounted rates
+           live!
           </span>{" "}
-          and enjoy{" "}
+          Get the exclusive opportunity to be a part of
           <span className="text-primary text-[24px] font-grandstander-medium_500">
-            massive staking rewards!
+            {" "} Investors&apos; round?
           </span>
         </div>
       </div>

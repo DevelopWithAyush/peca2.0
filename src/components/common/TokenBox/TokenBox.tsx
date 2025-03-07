@@ -168,7 +168,7 @@ const TokenBox = () => {
             paintOrder: "stroke fill",
           }}
         >
-          want to be a part of investor&apos;s round ?
+          Want to be a part of investors&apos; round ?
         </p>
         <p className="text-primary text-[16px] font-grandstander-black_900 leading-[125%] text-center "
           style={{
