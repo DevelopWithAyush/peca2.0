@@ -1,8 +1,11 @@
 "use client"
 import FadeInOut from "@/components/ui/FadeInOut";
 import Image from "next/image";
+import { useState } from "react";
 
 const Content = () => {
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+
   return (
     <div className="flex flex-col w-full xl:w-auto items-start justify-start gap-y-5 ">
       <button
@@ -44,7 +47,7 @@ const Content = () => {
             paintOrder: "stroke fill",
           }}
         >
-          A “truly” all-in-one crypto superapp - SupaDapp
+          A &quot;truly&quot; all-in-one crypto superapp - SupaDapp
         </p>
         <div className="flex flex-row items-center flex-wrap gap-y-3 justify-start gap-[11px] text-text text-[18px] font-grandstander-medium_500 ">
           <span>All your</span>
@@ -67,7 +70,7 @@ const Content = () => {
           <span>in one, organized place.</span>
         </div>
         <div className="  text-text font-grandstander-medium_500 text-[18px]  ">
-          Pepius Caesar’s{" "}
+          Pepius Caesar&apos;s{" "}
           <span className="text-primary font-grandstander-medium_500 leading-[160%] text-[24px] ">
             {" "}
             $PECA presale is live!
@@ -83,16 +86,24 @@ const Content = () => {
         </div>
       </div>
       <button
-        onClick={() =>
+        onClick={() => {
+          navigator.clipboard.writeText("info@pepiuscaesar.com");
+          setTooltipVisible(true);
+          setTimeout(() => setTooltipVisible(false), 2000);
           window.location.href =
-          "mailto:info@pepiuscaesar.com?subject=Inquiry&body=Hello,"
-        }
+            "mailto:info@pepiuscaesar.com?subject=Inquiry&body=Hello,";
+        }}
         className="self-center mt-6 relative group"
       >
         <Button />
         <p className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[25%] font-grandstander-medium_500 leading-[160%] text-[20px] text-background h-full">
           Connect With Us Today!
         </p>
+        {tooltipVisible && (
+          <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm rounded px-2 py-1">
+            Email copied!
+          </span>
+        )}
       </button>
 
     </div>

@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import TokenDetailsCard from "./TokenDetailsCard";
 import Accordian from "./Accordian";
 import Image from "next/image";
 import { VectorButton } from "@/VectorImages/Image";
 import TokenBuyCharacter from "./TokenBuyCharacter";
+import { HandleContext } from "@/hooks/handleState";
+
 
 const Content = () => {
+  const { pageJump } = useContext(HandleContext);
 
   const [targetDate] = useState(() => {
     const date = new Date('2025-04-06T00:00:00')
@@ -83,12 +86,12 @@ const Content = () => {
             desc="0xccB365D2e11aE4D6d74715c680f56cf58bF4
                   bF10"
           /> */}
-          <div className="relative left-10 z-0 w-auto">
+          <button onClick={() => pageJump(2)} className="relative left-10 z-0 w-auto">
             <p className="px-8 py-5 absolute z-40 text-background font-grandstander-medium_500 leading-[160%]">
               Full Tokenomics
             </p>
             <VectorButton width="202" />
-          </div>
+          </button>
         </div>
         <div className="flex flex-col items-start justify-start gap-8 relative">
           <Image

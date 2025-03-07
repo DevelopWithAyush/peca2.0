@@ -3,9 +3,9 @@ import Marquee from "../ui/Infinitemovingcr";
 
 const reviews = [
   "Pepius is cooking SupaDapp",
-  "AI or memecoins: $PECA combines both",
-  "The world’s first ever “Truly” crypto superapp PRESALE is live!",
-  "Get in EARLY and buy tokens at dirt-cheap rate!"
+  "AI, utility or memecoins: $PECA combines all",
+  "The world’s first ever “Truly” crypto superapp LAUNCH countdown is live!",
+  "Get in EARLY and be a part of Investors’ round"
 ];
 
 const  MovingText = () => {

@@ -4,6 +4,7 @@ import TokenBuyCharacter from "@/components/Desktop/Slide2/TokenBuyCharacter";
 import TokenDetailsCard from "@/components/Desktop/Slide2/TokenDetailsCard";
 import { VectorButton } from "@/VectorImages/Image";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HowToBuyPecaToken = () => {
@@ -82,12 +83,12 @@ const HowToBuyPecaToken = () => {
             width={146}
             height={199}
           />
-          <button className="relative">
+          <Link href={"#tokenomics"} className="relative">
             <p className="absolute top-0 left-0 z-30 py-4 px-8 text-background text-[18px] font-grandstander-medium_500 ">
               Full Tokenomics
             </p>
             <VectorButton width="202" />
-          </button>
+          </Link>
         </div>
         <div className="w-full flex flex-col items-start justify-start gap-y-5">
           <Accordian
