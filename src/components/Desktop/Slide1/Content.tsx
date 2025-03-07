@@ -100,7 +100,7 @@ const Content = () => {
           Connect With Us Today!
         </p>
         {tooltipVisible && (
-          <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm rounded px-2 py-1">
+          <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white  font-grandstander-medium_500 text-sm rounded px-2 py-1">
             Email copied!
           </span>
         )}

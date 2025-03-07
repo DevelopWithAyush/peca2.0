@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 // import React, { useState } from "react";
 import Time from "./Time";
 // import ProgressBar from "./ProgressBar";
@@ -9,6 +10,8 @@ import Time from "./Time";
 
 // 定义一个名为TokenBox的函数组件
 const TokenBox = () => {
+
+    const [tooltipVisible, setTooltipVisible] = useState(false);
   // const [isInfoOpen, setIsInfoOpen] = useState("sol");
   return (
     <div className="xl:w-auto xl:h-auto w-full   bg-primary p-5 xl:p-6 border-[8px] border-solid border-border rounded-[44px] flex flex-col items-center justify-start gap-4  ">
@@ -177,12 +180,26 @@ const TokenBox = () => {
           Hurry up! Talk to us today!
         </p>
 
-        <button className="rounded-[8px] bg-background text-white border-[2px] border-solid border-primary text-[16px] font-grandstander-black_900 leading-[125%] text-center py-[14px] px-[32px] mt-[14px] "
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText("info@pepiuscaesar.com");
+            setTooltipVisible(true);
+            setTimeout(() => setTooltipVisible(false), 2000);
+            window.location.href =
+              "mailto:info@pepiuscaesar.com?subject=Inquiry&body=Hello,";
+          }}
+          
+          className="rounded-[8px] relative bg-background text-white border-[2px] border-solid border-primary text-[16px] font-grandstander-black_900 leading-[125%] text-center py-[14px] px-[32px] mt-[14px] "
           style={{
             boxShadow: "2px 2px 0px 0px var(--primary, #FFD700)",
         }}
         >
           Connect Now !
+          {tooltipVisible && (
+            <span className="absolute w-full  -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm rounded px-2 py-1">
+              Email copied!
+            </span>
+          )}
         </button>
       </div>
     </div>

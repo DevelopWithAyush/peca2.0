@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utility";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import XIcon from "./XIcon";
 import TelegramIcon from "./TelegramIcon";
 
@@ -10,7 +10,9 @@ const MobileNavbar = ({
 }: {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
-}) => {
+  }) => {
+  
+    const [tooltipVisible, setTooltipVisible] = useState(false);
   return (
     <>
       <div
@@ -183,7 +185,15 @@ const MobileNavbar = ({
 
           <div className="flex flex-row items-center justify-start gap-5 w-full">
             <button
-              className="text-[22px] leading-[160%] text-text font-grandstander-medium_500 px-8 py-[5px] bg-green rounded-[8px] flex flex-col items-center justify-center "
+
+              onClick={() => {
+                navigator.clipboard.writeText("info@pepiuscaesar.com");
+                setTooltipVisible(true);
+                setTimeout(() => setTooltipVisible(false), 2000);
+                window.location.href =
+                  "mailto:info@pepiuscaesar.com?subject=Inquiry&body=Hello,";
+              }}
+              className="text-[22px] leading-[160%] relative  text-text font-grandstander-medium_500 px-8 py-[5px] bg-green rounded-[8px] flex flex-col items-center justify-center "
               style={{
                 WebkitTextStrokeWidth: "5px",
                 WebkitTextStrokeColor: "#4B0082",
@@ -191,6 +201,11 @@ const MobileNavbar = ({
               }}
             >
               Connect
+              {tooltipVisible && (
+                <span className="absolute w-full -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white  font-grandstander-medium_500 text-sm rounded px-2 py-1">
+                  Email copied!
+                </span>
+              )}
             </button>
             <button className="text-[18px] leading-[160%] text-background font-grandstander-medium_500 px-8 py-2 bg-primary rounded-[8px] flex flex-col items-center justify-center">
               Audit

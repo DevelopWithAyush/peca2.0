@@ -12,6 +12,8 @@ import XIcon from "./XIcon";
 import Link from "next/link";
 
 const Header = () => {
+
+    const [tooltipVisible, setTooltipVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
     const { pageJump } = useContext(HandleContext);
   return (
@@ -135,7 +137,15 @@ const Header = () => {
             Audit
           </button>
           <button
-            className="text-[22px]
+
+            onClick={() => {
+              navigator.clipboard.writeText("info@pepiuscaesar.com");
+              setTooltipVisible(true);
+              setTimeout(() => setTooltipVisible(false), 2000);
+              window.location.href =
+                "mailto:info@pepiuscaesar.com?subject=Inquiry&body=Hello,";
+            }}
+            className="text-[22px] relative
             duration-500 ease-in-out
             hover:bg-[linear-gradient(100deg,#55A330_31.35%,#96C_98.76%)] 
             leading-[160%] text-text font-grandstander-medium_500 px-8 py-[5px] bg-green rounded-[8px] flex flex-col items-center justify-center "
@@ -146,6 +156,11 @@ const Header = () => {
             }}
           >
             Connect
+            {tooltipVisible && (
+              <span className="absolute -top-8 w-full left-1/2 transform -translate-x-1/2 bg-black text-white  font-grandstander-medium_500 text-sm rounded px-2 py-1">
+                Email copied!
+              </span>
+            )}
           </button>
           <button className="flex flex-row items-center justify-between w-[79px]">
             <div className="text-[16px] py-[7px] px-[16px] border-[2px] border-solid border-background text-background font-grandstander-medium_500 rounded-[8px] ">
