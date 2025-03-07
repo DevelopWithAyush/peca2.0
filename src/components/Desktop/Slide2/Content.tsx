@@ -100,15 +100,16 @@ const Content = () => {
           />
           <Accordian
             title="Get Wallet"
-            desc="WEPE Army already have wallets? 🤔 But if not, try MetaMask or Best Wallet. You can even buy $WEPE directly in ‘Upcoming Tokens’ in Best Wallet."
+            desc="PECA Army already has wallets? 🤔 But if not, install Phantom wallet. You can even buy $PECA directly from Solana’s telegram trading bots like BloomBot, NovaBot, TrojanBot, BonkBot.
+"
           />
           <Accordian
             title="Fund Wallet"
-            desc="Load ETH, BNB or USDT to your wallet to swap for $WEPE tokens. Send a little extra ETH or BNB to pay for gas fees. If that’s a hassle, just use a bank card. "
+            desc="Load SOL, USDC etc to your wallet to swap for $PECA tokens. Send a little extra SOLs to pay for gas fees if you are using coins apart from SOL . If that’s a hassle, just fund with SOLs."
           />
           <Accordian
             title="Buy & Stake"
-            desc="To purchase $WEPE, connect your wallet to the site. Select payment method and amount to buy. Confirm the transaction. Stake $WEPE if you want that sweet APY!"
+            desc="To purchase $PECA, swap your SOLs etc with a $PECA token address (Double check the address to avoid scams). Confirm the transaction. You are now all set for investment!"
           />
 
           <TokenBuyCharacter />

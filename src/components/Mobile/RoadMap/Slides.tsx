@@ -81,7 +81,7 @@ export default function Slides() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: direction === 1 ? "-100%" : "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-[265px] bg-green text-white rounded-[24px] p-6 shadow-lg relative border-4 border-solid border-primary"
+          className="w-full h-[300px] bg-green text-white rounded-[24px] p-6 shadow-lg relative border-4 border-solid border-primary"
           style={{
             boxShadow: "4px 4px 0px 0px var(--primary, #FFD700)",
           }}
