@@ -118,9 +118,9 @@ const Header = () => {
           <button onClick={() => pageJump(4)}>
             <NavLink   title="Roadmap" />
           </button>
-          <Link href={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"} target="_blank">
+          {/* <Link href={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"} target="_blank">
             <NavLink title="Whitepaper" />
-          </Link>
+          </Link> */}
         </nav>
         <div className=" hidden flex-row items-center justify-start gap-4 xl:flex">
           <Link href={"https://x.com/Pepius_Caesar"} target="_blank">
