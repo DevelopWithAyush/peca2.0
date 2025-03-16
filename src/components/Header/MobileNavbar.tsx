@@ -146,14 +146,14 @@ const MobileNavbar = ({
             >
               Roadmap
             </Link>
-            <Link
+            {/* <Link
               className="p-[6px] text-background text-[18px] font-grandstander-medium_500 leading-normal"
               href={"https://drive.google.com/file/d/1bO_Gn5a7vZ6vREHjaEzCt5vNwQSv0l8E/view?usp=drive_link"}
               target="_blank"
               onClick={() => setIsOpen(false)}
             >
               WhitePaper
-            </Link>
+            </Link> */}
                   </div>
                   <div className="flex flex-row items-center justify-start gap-4 ">
             <Link href={"https://x.com/Pepius_Caesar"} target="_blank">
