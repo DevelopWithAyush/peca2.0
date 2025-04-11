@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 const Time = () => {
     // Set target date to April 6th, 2025
     const [targetDate] = useState(() => {
-        const date = new Date('2025-04-06T00:00:00')
+        const date = new Date('2025-05-11T00:00:00')
         return date.getTime()
     })
 
